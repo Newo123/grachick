@@ -1,0 +1,167 @@
+@import '../mixins.scss';
+
+.visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid $gold5D;
+    transform: translateX(0);
+    @include transition;
+}
+
+.hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid $gold5D;
+    transform: translateX(100%);
+    @include transition;
+}
+
+.border-bot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid $gold5D;
+    transform: translateX(-100%);
+    @include transition;
+}
+
+.header {
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &-tel {
+            font-family: $Roboto;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            padding: 2px;
+            position: relative;
+            overflow: hidden;
+            @include transition;
+            &:hover .border-bot {
+                transform: translateX(0);
+            }
+            // & {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     border-bottom: 1px solid $gold5D;
+            //     transform: translateX(-100%);
+            //     @include transition;
+            // }
+
+            // &:hover {
+
+            //     & > div {
+            //         transform: translateX(0);
+            //     }
+            // }
+
+            // &::before {
+            //     content: '';
+            //     display: block;
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     border-bottom: 1px solid $gold5D;
+            //     transform: translateX(-100%);
+            //     @include transition;
+            // }
+
+            // &:hover {
+            //     &::before {
+            //         transform: translateX(0);
+            //     }
+            // }
+        }
+
+        &-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                &-item {
+
+                    &-link {
+                        display: inline-block;
+                        font-family: $Roboto;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0.05em;
+                        text-transform: capitalize;
+                        position: relative;
+                        overflow: hidden;
+                        padding: 2px;
+
+                        @include transition;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border-bottom: 1px solid $gold5D;
+                            transform: translateX(-100%);
+                            @include transition;
+                        }
+
+
+                        &:hover {
+                            &::before {
+                                transform: translateX(0);
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            font-family: $Roboto;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+            color: $gold5D;
+
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+        }
+    }
+}
