@@ -61,46 +61,13 @@
             padding: 2px;
             position: relative;
             overflow: hidden;
-            @include transition;
-            &:hover .border-bot {
-                transform: translateX(0);
+            &::before {
+                @include el-before;
             }
-            // & {
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     border-bottom: 1px solid $gold5D;
-            //     transform: translateX(-100%);
-            //     @include transition;
-            // }
 
-            // &:hover {
-
-            //     & > div {
-            //         transform: translateX(0);
-            //     }
-            // }
-
-            // &::before {
-            //     content: '';
-            //     display: block;
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     border-bottom: 1px solid $gold5D;
-            //     transform: translateX(-100%);
-            //     @include transition;
-            // }
-
-            // &:hover {
-            //     &::before {
-            //         transform: translateX(0);
-            //     }
-            // }
+            &:hover::before {
+                @include el-before-hover;
+            }
         }
 
         &-nav {
@@ -130,23 +97,11 @@
                         @include transition;
 
                         &::before {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            border-bottom: 1px solid $gold5D;
-                            transform: translateX(-100%);
-                            @include transition;
+                            @include el-before;
                         }
-
-
-                        &:hover {
-                            &::before {
-                                transform: translateX(0);
-                            }   
+            
+                        &:hover::before {
+                            @include el-before-hover;
                         }
                     }
                 }

@@ -1,0 +1,106 @@
+.footer {
+    margin-top: 100px;
+    border-top: 1px solid $gold5D;
+    height: 298px;
+    padding-top: 41px;
+    padding-bottom: 10px;
+
+    &__container {
+        display: grid;
+        grid-template-columns:  auto 1fr;
+        align-items: center;
+        height: 100%;
+
+
+        &-contacts {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            &__card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                &-img {
+                    margin-bottom: 20px;
+                }
+
+                &-title {
+                    font-family: $Roboto;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    text-transform: capitalize;
+                    color: $gold5D;
+                    margin-bottom: 16px;
+                }
+
+                &-desc {
+                    font-family: $Roboto;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        
+        &-left {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            &__policy {
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                
+                &-link {
+                    font-family: $Inter;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 140%;
+                    color: #4d4d4d;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &-year {
+                    font-family: $Inter;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 140%;
+                    color: #4d4d4d;
+                }
+            }
+
+            &__social {
+                display: flex;
+                flex-direction: column;
+                gap: 31px;
+
+                &-logo {
+                    font-family: $Roboto;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    text-transform: capitalize;
+                    color: $gold5D;
+                }
+
+                &-mask {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}
