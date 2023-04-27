@@ -11,20 +11,55 @@ const btnDrop = document.getElementsByClassName('modal__content-dropbtn');
 const list = document.querySelector('.modal__content-droplist');
 const subBtn = document.querySelector('.modal__content-submit');
 const circle = document.querySelector('.modal__circle');
+const thank = document.querySelector('.thank')
 let number = Math.ceil(Math.random() * 1000);
 
-// subBtn.addEventListener('click', () => {
-//     circle.style.transform = `rotate(${number}deg)`;
-//     number += Math.ceil(Math.random * 1000);
-// });
+subBtn.addEventListener('click', () => {
 
-subBtn.onclick = () => {
-    circle.style.transform = `rotate(${number}deg)`;
-    number += Math.ceil(Math.random * 1000);
-}
+    if (subBtn.innerHTML === 'Вращать колесо') {
+        circle.style.transform = `rotate(${number}deg)`;
+        number += Math.ceil(Math.random * 1000);
+        const input = document.createElement('input');
+        document.querySelector('.modal__content').replaceChild(input, dropList);
+        
+        input.classList.add('modal__content-input')
+    
+        document.querySelector('.modal__content-input').setAttribute('placeholder', '+7 (000) 000-00-00');
+        document.querySelector('.modal__content-input').setAttribute('type', 'tel');
+        document.querySelector('.modal__content-input').setAttribute('name', 'tel');
+        document.querySelector('.modal__content-input').setAttribute('data-validate-field', 'tel');
+        document.querySelector('.modal__content-input').setAttribute('title', 'Используйте числовой формат ввода!');
+        document.querySelector('.modal__content-input').setAttribute('id', 'telefon');
+    
+        let tel = document.getElementById('telefon');
+        let maskOptions = {
+            mask: '+7 (000) 000-00-00',
+            lazy: false,
+        }
+        let mask = IMask(tel, maskOptions);
+    
+        subBtn.setAttribute('disabled', '');
+        subBtn.classList.remove('hover-btn');
+        subBtn.innerHTML = 'Отправить';
+    
+        setTimeout(() => {
+        subBtn.removeAttribute('disabled');
+        subBtn.classList.add('hover-btn');
+        }, 3000);
+
+    } else if (subBtn.innerHTML === 'Отправить') {
+        modal.style.display = 'none';
+        thank.style.display = 'flex';
+
+        setTimeout(() => {
+            closeModalWindow();
+        }, 2000);
+        //subBtn отправка на сервер номер телефона
+    }
+});
 
 window.addEventListener('DOMContentLoaded', () => {
-    // subBtn.setAttribute('disabled', '');
+    subBtn.setAttribute('disabled', '');
 });
 
 
@@ -57,7 +92,7 @@ subBtn.addEventListener('click', () => {
 });
 
 const Undis = () => {
-    // subBtn.setAttribute('disabled', 'none');
+    subBtn.removeAttribute('disabled');
     subBtn.classList.add('hover-btn');
 }
 
