@@ -1,0 +1,349 @@
+@import '../vars.scss';
+
+.nav {
+
+
+    &__container {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        display: flex;
+        gap: 10px;
+
+        & a:first-child {
+            font-family: $Inter;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            opacity: 0.4;
+
+            @include transition;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        & a:last-child {
+            font-family: $Inter;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+        }
+    }
+
+
+}
+
+
+
+.calculate {
+
+
+    &__container {
+        display: grid;
+        gap: 50px;
+
+
+        &-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 38px;
+
+            &__btns {
+
+                width: 100%;
+                background-color: $bg21;
+                position: relative;
+                z-index: 2;
+                height: 459px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.2);
+                    opacity: .2;
+                    z-index: -1;
+                }
+
+                &-content {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 123px);
+                    grid-template-areas:
+                        "type dev"
+                        "count terms"
+                        ". reload";
+
+                    gap: 40px 60px;
+                    position: relative;
+                    // overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px 72px 50px 74px;
+                }
+
+                &-terms {
+                    grid-area: terms;
+                    display: none;
+                }
+
+                &-count {
+                    grid-area: count;
+                    display: none;
+
+                }
+
+                &-development {
+                    grid-area: dev;
+                }
+
+                &-type {
+                    grid-area: type;
+                }
+
+                &-reload {
+                    grid-area: reload;
+                }
+
+                &-terms,
+                &-count,
+                &-development,
+                &-type {
+                    position: relative;
+
+                    &-list {
+                        position: absolute;
+                        left: 0;
+                        top: calc(100% + 4px);
+                        right: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        max-height: 0;
+                        overflow: hidden;
+                        // padding: 30px;
+
+                        background-color: rgba(0, 0, 0, .4);
+                        backdrop-filter: blur(10px);
+                        @include transition;
+                        z-index: 4;
+
+                        &__item {
+                            cursor: pointer;
+                            font-family: $Roboto;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 130%;
+                            color: #818181;
+                            @include transition;
+
+                            &:hover {
+                                color: $whiteF;
+                            }
+                        }
+
+                    }
+
+                    &-btn {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 28px 30px 29px 30px;
+                        cursor: pointer;
+                        background: none;
+                        border: 1px solid $gold5D;
+
+                        & p {
+                            font-family: $Roboto;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 130%;
+                            color: $grayB3;
+                        }
+
+                        & svg {
+                            @include transition;
+                        }
+                    }
+
+                    &-title {
+                        font-family: $Playfair;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0.05em;
+                        color: $gold5D;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &-reload {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    grid-area: reload;
+                    cursor: pointer;
+                    justify-self: flex-end;
+                    align-self: flex-end;
+
+                    & img {
+                        @include transition;
+                    }
+
+                    &:hover img {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+
+            &__form {
+                position: relative;
+                padding: 38px 50px 31px 50px;
+                background-color: $bg21;
+                display: flex;
+                flex-direction: column;
+                max-width: 536px;
+                z-index: 2;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.2);
+                    opacity: .2;
+                    z-index: -1;
+                }
+
+                &-title {
+                    font-family: $Playfair;
+                    font-weight: 400;
+                    font-size: 26px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    color: $gold5D;
+                    margin-bottom: 55px;
+                }
+
+                &-input {
+                    padding: 10px 20px;
+                    font-family: $Roboto;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 130%;
+                    color: $grayB3;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $gold5D;
+                    margin-bottom: 60px;
+                    outline: none;
+                }
+
+                &-price {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+                    font-family: $ZenAntique;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 38px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 49px;
+
+                    & span {
+                        font-family: $Sitka;
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 130%;
+                        letter-spacing: 0.05em;
+                        color: $gold5D;
+                    }
+                }
+
+
+                &-btn {
+                    font-family: $Playfair;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    color: $whiteF;
+                    background: none;
+                    border: 1px solid $gold5D;
+                    cursor: pointer;
+                    padding: 18px 0 19px 0;
+                    margin-bottom: 24px;
+                    @include transition;
+
+
+
+                    &:hover {
+                        background: $gold5D;
+                    }
+                }
+
+                &-personal {
+                    font-family: $Inter;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 140%;
+
+                    & a {
+                        color: $gold5D;
+                        @include transition;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        &-header {
+
+
+            &__info {
+                font-family: $Playfair;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 130%;
+                letter-spacing: 0.05em;
+                color: $gold5D;
+                margin-bottom: 10px;
+            }
+
+            &__title {
+                font-family: $Playfair;
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 130%;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+
+
+.active-btn {
+    & svg {
+
+        transform: rotate(180deg);
+    }
+}
+
+.active-list {
+    max-height: auto;
+    padding: 30px;
+}

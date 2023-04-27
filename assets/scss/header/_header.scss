@@ -65,6 +65,7 @@
             padding: 2px;
             position: relative;
             overflow: hidden;
+
             &::before {
                 @include el-before;
             }
@@ -90,7 +91,7 @@
 
                 &-item {
 
-                    
+
 
                     &:first-child {
                         display: flex;
@@ -118,7 +119,7 @@
                         &::before {
                             @include el-before;
                         }
-            
+
                         &:hover::before {
                             @include el-before-hover;
                         }
@@ -144,6 +145,7 @@
     max-height: 100vh;
     padding-top: 30px;
     padding-bottom: 30px;
+    overflow: visible;
 }
 
 .header__container-nav__list-item:first-child:hover .header__container-nav__list-item-link::before {
@@ -192,9 +194,14 @@
     padding-left: 18px;
     border-left: 1px solid #818181;
     max-height: 0;
-    overflow: hidden;
-
+    // overflow: hidden;
+    width: 100%;
     max-height: 100vh;
+    max-width: max-content;
+    margin: 0;
+
+
+
     &__item {
         display: inline-block;
         font-family: $Roboto;
@@ -204,11 +211,13 @@
         white-space: nowrap;
         position: relative;
         width: 100%;
-        max-width: max-content;
-        & > p {
+        // max-width: max-content;
+
+        &>p {
             max-width: max-content;
         }
-        & > p > span {
+
+        &>p>span {
             display: block;
             width: 100%;
             height: 1px;
@@ -217,23 +226,23 @@
             @include transition;
         }
 
-        &:hover > p > span {
+        &:hover>p>span {
             max-width: 100%;
         }
 
-        & > div {
+        &>div {
             position: absolute;
             top: 0;
             left: 100%;
-            padding-left: 44px;
-            max-width: 0;
+            max-width: 100%;
             overflow: hidden;
             @include transition;
         }
 
-        &:hover > div {
+        &:hover>div {
             max-width: 100%;
             overflow: visible;
+            padding-left: 44px;
         }
 
         &-sub {
@@ -253,30 +262,33 @@
                 white-space: nowrap;
                 max-width: max-content;
                 width: 100%;
-                // position: relative;
+                position: relative;
 
 
-                & > div {
+                &>div {
                     position: absolute;
                     top: 0;
                     left: 100%;
-                    padding-left: 44px;
+                    padding: 0;
                     // width: 100%;
                     max-width: 0;
                     overflow: hidden;
                     @include transition;
                 }
-                &:hover > div {
+
+                &:hover>div {
                     max-width: 100%;
                     overflow: visible;
                     width: 100%;
+                    padding-left: 44px;
+
                 }
 
-                & > p {
+                &>p {
                     max-width: max-content;
                 }
 
-                & > p > span {
+                &>p>span {
                     display: block;
                     width: 100%;
                     height: 1px;
@@ -284,8 +296,8 @@
                     max-width: max-content;
                     @include transition;
                 }
-        
-                &:hover > p > span {
+
+                &:hover>p>span {
                     max-width: 100%;
                 }
             }
@@ -301,8 +313,9 @@
     left: 0;
     background-color: rgba(0, 0, 0, .8);
     width: 100vw;
-    max-height: 0;
+    max-height: 100vh;
     padding: 0;
+
     &::after {
         content: '';
         position: absolute;
@@ -311,5 +324,218 @@
         top: 0;
         left: -100%;
         background-color: rgba(0, 0, 0, .8);
+    }
+}
+
+
+.header__container-nav__list-item:first-child:hover .sub__menu {
+    padding: 30px 0;
+    max-height: 3000%;
+    overflow: visible;
+}
+
+
+.sub__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    max-height: 0;
+    overflow: hidden;
+
+    @include transition;
+
+    &-item {
+        white-space: nowrap;
+        padding-bottom: 18px;
+        @include transition;
+        padding-right: 44px;
+        padding-left: 18px;
+        border-left: 1px solid #818181;
+
+        &:hover .second__menu {
+            max-width: 3000%;
+            padding: 30px 0;
+            overflow: visible;
+
+            &-item {
+                padding-right: 44px;
+
+            }
+        }
+
+
+        &>p {
+            max-width: max-content;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            padding-bottom: 2px;
+            @include transition;
+        }
+
+        &>p>span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $gold5D;
+            max-width: 0;
+            @include transition;
+        }
+
+        &:hover>p>span {
+            max-width: 100%;
+            @include transition;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+.second__menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: auto;
+
+    min-height: 100%;
+
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    max-width: 0;
+    @include transition;
+
+    &-item {
+        white-space: nowrap;
+        border-left: 1px solid #818181;
+        padding-bottom: 18px;
+        @include transition;
+        padding-left: 18px;
+        min-width: 100%;
+
+        &:hover .thred__menu {
+            max-width: 3000%;
+            padding: 30px 0;
+            overflow: visible;
+
+            &-item {
+                padding-right: 44px;
+
+            }
+        }
+
+        &>a {
+            display: block;
+            max-width: max-content;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            padding-bottom: 2px;
+            @include transition;
+        }
+
+        &>a>span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $gold5D;
+            max-width: 0;
+            @include transition;
+        }
+
+        &:hover>a>span {
+            max-width: 100%;
+            @include transition;
+        }
+
+        &>p {
+            max-width: max-content;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            padding-bottom: 2px;
+            @include transition;
+        }
+
+        &>p>span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $gold5D;
+            max-width: 0;
+            @include transition;
+        }
+
+        &:hover>p>span {
+            max-width: 100%;
+            @include transition;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.thred__menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: auto;
+
+    min-height: 100%;
+
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    max-width: 0;
+    @include transition;
+
+    &-item {
+        white-space: nowrap;
+        border-left: 1px solid #818181;
+        padding-bottom: 18px;
+        @include transition;
+        padding-left: 18px;
+        min-width: 100%;
+
+
+        &>a {
+            display: block;
+            max-width: max-content;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            padding-bottom: 2px;
+            @include transition;
+        }
+
+        &>a>span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $gold5D;
+            max-width: 0;
+            @include transition;
+        }
+
+        &:hover>a>span {
+            max-width: 100%;
+            @include transition;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 }
