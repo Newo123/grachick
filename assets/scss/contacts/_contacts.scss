@@ -1,0 +1,82 @@
+@import '../vars.scss';
+
+.contacts-hero {
+    height: calc(100vh - 110px);
+
+    background-image: url('../img/contacts-hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.contacts {
+    &__container {
+        margin-bottom: 100px;
+
+        &-title {
+            font-family: $Playfair;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            margin-bottom: 60px;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__social {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &>p {
+                    font-family: $Roboto;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 130%;
+                    color: $grayB3;
+                }
+
+                &-icons {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                }
+            }
+
+            &__block {
+                display: flex;
+                gap: 30px;
+                align-items: flex-end;
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 27px;
+
+                    & p:first-child {
+                        font-family: $Roboto;
+                        font-weight: 300;
+                        font-size: 18px;
+                        line-height: 130%;
+                        color: $grayB3;
+                    }
+
+                    & p:last-child {
+                        font-family: $Roboto;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0.05em;
+                        text-transform: capitalize;
+                        color: $black4E;
+                    }
+                }
+            }
+        }
+    }
+}

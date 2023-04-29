@@ -30,6 +30,17 @@ const addText = (child) => {
         terms.children[0].innerText = child.innerText;
 
     }
+
+    if (type.children[0].innerText !== 'Выбор' && dev.children[0].innerText !== 'Выбор') {
+        const blockCount = document.querySelector('.calculate__container-content__btns-count');
+        const blockTerms = document.querySelector('.calculate__container-content__btns-terms');
+        document.querySelector('.calculate__container-content__btns').style.maxHeight = '100%';
+        setTimeout(() => {
+            blockCount.style.display = 'block';
+            blockTerms.style.display = 'block';
+            reset.style.display = 'flex';
+        }, 300)
+    }
 }
 
 for (let i = 0; i < typeListItems.length; i++) {
@@ -89,6 +100,15 @@ const resetAll = () => {
     for (let i = 0; i < btns.length; i++) {
         btns[i].children[0].innerText = 'Выбор';
     }
+
+    const blockCount = document.querySelector('.calculate__container-content__btns-count');
+    const blockTerms = document.querySelector('.calculate__container-content__btns-terms');
+    document.querySelector('.calculate__container-content__btns').style.maxHeight = '296px';
+    setTimeout(() => {
+        blockCount.style.display = 'none';
+        blockTerms.style.display = 'none';
+        reset.style.display = 'none';
+    }, 100)
 }
 
 

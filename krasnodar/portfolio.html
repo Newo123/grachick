@@ -22,7 +22,7 @@
                             <li class="sub__menu-item"><p>Маркетинговые услуги<span></span></p>
                                 <ul class="second__menu">
                                     <li class="second__menu-item">
-                                        <p>Разработка<span></span></p>
+                                        <a href="./services/development.html">Разработка<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Разработка интернет магазина<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Разработка лендинга<span></span></a></li>
@@ -34,7 +34,7 @@
                                         </ul>
                                     </li>
                                     <li class="second__menu-item">
-                                        <p>Продвижение сайта<span></span></p>
+                                        <a href="./services/promotion.html">Продвижение сайта<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Сео продвижение сайта<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Продвижение сайта за позиции<span></span></a></li>
@@ -45,7 +45,7 @@
                                         </ul>
                                     </li>
                                     <li class="second__menu-item">
-                                        <p>СММ<span></span></p>
+                                        <a href="./services/smm.html">СММ<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Ведение вк<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Ведение инстаграмм<span></span></a></li>
@@ -53,7 +53,7 @@
                                         </ul>
                                     </li>
                                     <li class="second__menu-item">
-                                        <p>Контекстная реклама<span></span></p>
+                                        <a href="./services/contextual-advertising.html">Контекстная реклама<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Настройка контекстной рекламы<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Ведение контекстной рекламы<span></span></a></li>
@@ -61,14 +61,14 @@
                                         </ul>
                                     </li>
                                     <li class="second__menu-item">
-                                        <p>Рассылка (массовое оповещение)<span></span></p>
+                                        <a href="./services/mass-alert.html">Рассылка (массовое оповещение)<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Рассылка вотсап<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Рассылка телеграмм<span></span></a></li>
                                         </ul>
                                     </li>
                                     <li class="second__menu-item">
-                                        <p>Маркетолог<span></span></p>
+                                        <a href="./services/marketer.html">Маркетолог<span></span></a>
                                         <ul class="thred__menu">
                                             <li class="thred__menu-item"><a href="#">Маркетинговые исследования<span></span></a></li>
                                             <li class="thred__menu-item"><a href="#">Анализ рынка<span></span></a></li>
@@ -204,7 +204,145 @@
 
 
     <main>
+        <section class="nav">
+            <div class="container-secondary nav__container">
+                <a href="../index.html">Главная</a>
+                <img src="../assets/img/peshka.svg" alt="peshka">
+                <a href="./portfolio.html">Портфолио</a>
+            </div>
+        </section>
 
+        <section class="filter">
+            <div class="container-secondary filter__container">
+                <p class="filter__container-label">подбор</p>
+                <h2 class="filter__container-title">фильтр по поиску портфолио</h2>
+                <div class="filter__container-filter">
+                    <div class="filter__container-filter-top"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>H</span></div>
+                    <div class="filter__container-filter-left"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+                    <div class="filter__container-filter-center">
+                        <p class="filter__container-filter-center__title">Маркетинговые услуги</p>
+                        <p class="filter__container-filter-center__label">Тип услуг</p>
+                        <div class="filter__container-filter-center__tabs">
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input checked type="radio">
+                                <span class="before"></span>
+                                Разработка
+                            </label>
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input type="radio">
+                                <span></span>
+                                СММ
+                            </label>
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input type="radio">
+                                <span></span>
+                                Рассылка<br>(массовое оповещение)
+                            </label>
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input type="radio">
+                                <span></span>
+                                Продвижение сайта
+                            </label>
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input type="radio">
+                                <span></span>
+                                Контекстная реклама
+                            </label>
+                            <label class="filter__container-filter-center__tabs-tab">
+                                <input type="radio">
+                                <span></span>
+                                Маркетолог
+                            </label>
+                        </div>
+                        <button class="filter__container-filter-center__btn">Показать</button>
+                    </div>
+                    <div class="filter__container-filter-right"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+                    <div class="filter__container-filter-bottom"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>H</span></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content">
+            <div class="container-secondary content__container">
+                <p class="content__container-label">ПОРТФОЛИО</p>
+                <h2 class="content__container-title">Разрабатываем сайты для бизнеса</h2>
+                <p class="content__container-desc">Сайт-каталог — удобный инструмент демонстрации ассортимента для непрямых продаж. Подходит малому бизнесу, производителям продукции, оптовым продавцам, дистрибьюторам и дилерам. Будет полезен крупной компании, реализующей товары и услуги под заказ в сегменте high-priced, premium, luxury — там, где важен личный контакт менеджера с клиентом.</p>
+                <div class="content__container-slider">
+                    <div class="content__container-slider__swiper">
+                        <div class="content__container-slider__swiper__slide">
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                        </div>
+                        <div class="content__container-slider__swiper__slide">
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                        </div>
+                        <div class="content__container-slider__swiper__slide">
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                        </div>
+                        <div class="content__container-slider__swiper__slide">
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                            <div><img src="../assets/img/real.png" alt="img"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content__container-slider__btns">
+                    <button class="content__container-slider__btns-left">
+                        <svg width="19" height="12" viewBox="0 0 19 12" fill="#BB8E5D" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.0002 10.0001C19.0009 10.1317 18.9757 10.2621 18.926 10.384C18.8762 10.5058 18.8029 10.6166 18.7102 10.7101C18.6172 10.8038 18.5066 10.8782 18.3848 10.929C18.2629 10.9797 18.1322 11.0059 18.0002 11.0059C17.8682 11.0059 17.7375 10.9797 17.6156 10.929C17.4937 10.8782 17.3831 10.8038 17.2902 10.7101L10.0002 3.41006L2.71019 10.7101C2.52188 10.8984 2.26649 11.0042 2.00019 11.0042C1.86833 11.0042 1.73776 10.9782 1.61594 10.9277C1.49411 10.8773 1.38342 10.8033 1.29019 10.7101C1.19695 10.6168 1.12299 10.5061 1.07253 10.3843C1.02207 10.2625 0.996094 10.1319 0.996094 10.0001C0.996094 9.73376 1.10188 9.47836 1.29019 9.29006L9.29019 1.29006C9.38315 1.19633 9.49375 1.12194 9.61561 1.07117C9.73747 1.0204 9.86817 0.994262 10.0002 0.994262C10.1322 0.994262 10.2629 1.0204 10.3848 1.07117C10.5066 1.12194 10.6172 1.19633 10.7102 1.29006L18.7102 9.29006C18.8029 9.3835 18.8762 9.49432 18.926 9.61615C18.9757 9.73799 19.0009 9.86845 19.0002 10.0001Z"/>
+                        </svg>
+                    </button>
+                    <button class="content__container-slider__btns-right">
+                        <svg width="19" height="12" viewBox="0 0 19 12" fill="#BB8E5D" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-0.000185057 1.99994C-0.000946083 1.86833 0.0242786 1.73787 0.0740432 1.61603C0.123808 1.49419 0.197134 1.38338 0.289816 1.28994C0.382778 1.19621 0.49338 1.12182 0.615238 1.07105C0.737097 1.02028 0.867804 0.99414 0.999815 0.99414C1.13183 0.99414 1.26253 1.02028 1.38439 1.07105C1.50625 1.12182 1.61685 1.19621 1.70981 1.28994L8.99981 8.58994L16.2898 1.28994C16.4781 1.10164 16.7335 0.995848 16.9998 0.995848C17.1317 0.995848 17.2622 1.02182 17.3841 1.07228C17.5059 1.12274 17.6166 1.1967 17.7098 1.28994C17.8031 1.38318 17.877 1.49387 17.9275 1.61569C17.9779 1.73751 18.0039 1.86808 18.0039 1.99994C18.0039 2.26624 17.8981 2.52164 17.7098 2.70994L9.70981 10.7099C9.61685 10.8037 9.50625 10.8781 9.38439 10.9288C9.26253 10.9796 9.13183 11.0057 8.99981 11.0057C8.8678 11.0057 8.7371 10.9796 8.61524 10.9288C8.49338 10.8781 8.38278 10.8037 8.28982 10.7099L0.289816 2.70994C0.197134 2.6165 0.123808 2.50568 0.0740432 2.38384C0.0242786 2.26201 -0.000946095 2.13154 -0.000185057 1.99994Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="thanks">
+            <div class="container-secondary thanks__container">
+                <h2 class="thanks__container-title">Благодарственное письмо</h2>
+                <p class="thanks__container-desc">Сайт-каталог — удобный инструмент демонстрации ассортимента для непрямых продаж. Подходит малому бизнесу, производителям продукции, оптовым продавцам, дистрибьюторам и дилерам. Будет полезен крупной компании, реализующей товары и услуги под заказ в сегменте high-priced, premium, luxury — там, где важен личный контакт менеджера с клиентом.</p>
+                <div class="thanks__container-content">
+                    <img class="thanks__container-content__img" src="../assets/img/pismo.png" alt="pismo">
+                    <img class="thanks__container-content__img" src="../assets/img/pismo.png" alt="pismo">
+                    <img class="thanks__container-content__img" src="../assets/img/pismo.png" alt="pismo">
+                </div>
+            </div>
+        </section>
 
         <section class="increase">
             <div class="container-secondary increase__container">
@@ -269,8 +407,8 @@
 
 
     <script src="https://unpkg.com/imask"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../js/slider.js"></script>
+    <script src="../js/radio.js"></script>
+    <script src="../js/slider-portfolio.js"></script>
     <script src="../js/collapse.js"></script>
     <script src="../js/dropdown.js"></script>
     <script src="../js/modal.js"></script>

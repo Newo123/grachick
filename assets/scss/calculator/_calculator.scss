@@ -56,6 +56,9 @@
                 position: relative;
                 z-index: 2;
                 height: 459px;
+                max-height: 296px;
+
+                @include transition;
 
                 &::after {
                     content: '';
@@ -183,7 +186,7 @@
                 }
 
                 &-reload {
-                    display: flex;
+                    display: none;
                     align-items: center;
                     gap: 10px;
                     grid-area: reload;

@@ -1,0 +1,75 @@
+@import '../vars.scss';
+
+.nav__stock {
+    padding-bottom: 20px;
+}
+
+
+.stock {
+
+
+    &__container {
+        display: grid;
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 20px;
+            @include transition;
+            overflow: hidden;
+
+        }
+
+        &-btn {
+            max-width: 400px;
+            width: 100%;
+            margin-top: 40px;
+
+            justify-self: center;
+
+            font-family: 'Playfair Display SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            padding: 18px 0 19px 0;
+            border: 1px solid $gold5D;
+            cursor: pointer;
+            background: none;
+            @include transition;
+
+            &:hover {
+                background: $gold5D;
+            }
+        }
+
+        &-card {
+            max-width: 548px;
+            width: 100%;
+
+
+            &__img {
+                margin-bottom: 22px;
+                width: 100%;
+            }
+
+            &__label {
+                font-family: $Roboto;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 130%;
+                margin-left: 44px;
+                margin-bottom: 10px;
+            }
+
+            &__title {
+                font-family: $Inter;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 150%;
+                margin-left: 44px;
+            }
+        }
+    }
+}

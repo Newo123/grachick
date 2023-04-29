@@ -1,0 +1,162 @@
+.nav__marketing {
+    margin-bottom: 10px;
+}
+
+
+.marketing {
+
+
+    &__container {
+
+
+        &-title {
+            font-family: $ZenAntique;
+            font-weight: 400;
+            font-size: 52px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        &-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            margin-bottom: 155px;
+
+            &__figures {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+
+                &-figure {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+
+                    @include transition;
+
+                    & img {
+                        opacity: .2;
+                        @include transition;
+                    }
+
+                    & p {
+                        position: absolute;
+                        top: 100%;
+                        @include transition;
+                        font-family: $Playfair;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0.05em;
+                        text-align: center;
+                    }
+
+                    &:hover {
+
+                        & p {
+                            color: $gold5D;
+                        }
+
+                        & img {
+                            opacity: .4;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $gold5D;
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.line-first,
+.line-last {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 760px;
+        height: 1px;
+        background: $gold5D;
+    }
+}
+
+.line-first {
+    &::before {
+        left: 0;
+    }
+}
+
+.line-last {
+    &::before {
+        right: 0;
+    }
+}
+
+
+
+.figure-active {
+
+    & img {
+        opacity: .4;
+        margin-bottom: 0;
+    }
+
+    & p {
+        color: $gold5D;
+    }
+
+    & div {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.services__nav {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+        max-width: 534px;
+        width: 100%;
+        height: 200px;
+        padding: 55px 50px;
+        border: 1px solid $gold5D;
+        background: linear-gradient(0deg, rgba(10, 25, 33, 0.9), rgba(10, 25, 33, 0.9)), url('../img/bg-cards-link.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & p {
+            font-family: $Inter;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 150%;
+        }
+    }
+
+}
