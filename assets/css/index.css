@@ -2057,7 +2057,7 @@ template {
   padding-bottom: 50px;
   display: flex;
   gap: 10px; }
-  .nav__container a:first-child {
+  .nav__container a {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -2066,13 +2066,14 @@ template {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
-    .nav__container a:first-child:hover {
+    .nav__container a:hover {
       opacity: 1; }
   .nav__container a:last-child {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 140%; }
+    line-height: 140%;
+    opacity: 1; }
 
 .calculate__container {
   display: grid;
@@ -2660,6 +2661,70 @@ template {
       line-height: 150%;
       margin-left: 44px; }
 
+.accounting__container {
+  background: url("../img/buh-bg.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  padding: 40px 50px; }
+  .accounting__container-title {
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 130%;
+    letter-spacing: 0.05em; }
+
+.dev-buh {
+  margin-top: 100px; }
+
+.hr__container {
+  background: url("../img/hr-bg.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  padding: 40px 50px; }
+  .hr__container-title {
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 130%;
+    letter-spacing: 0.05em; }
+
+.promotion {
+  margin-bottom: 54px; }
+  .promotion__container img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; }
+
+.promotion-desc__container-label {
+  font-family: "Playfair Display SC", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #BB8E5D;
+  margin-bottom: 10px; }
+
+.promotion-desc__container-title {
+  font-family: "Playfair Display SC", sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px; }
+
+.promotion-desc__container-desc {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+  opacity: 0.6; }
+  .promotion-desc__container-desc:not(:last-child) {
+    margin-bottom: 20px; }
+
 .nav__marketing {
   margin-bottom: 10px; }
 
@@ -2770,3 +2835,226 @@ template {
       font-weight: 600;
       font-size: 30px;
       line-height: 150%; }
+
+.online-nav {
+  padding-bottom: 20px; }
+
+.online-hero {
+  background: url("../img/bg-service-online-store.png");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative; }
+  .online-hero::before {
+    content: '';
+    position: absolute;
+    height: 87px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 83.85%); }
+  .online-hero__container {
+    display: grid;
+    height: 100%; }
+    .online-hero__container-title {
+      font-family: "Zen Antique Soft", serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+      margin-top: 80px; }
+    .online-hero__container-btn {
+      align-self: flex-end;
+      background: none;
+      border: 1px solid #BB8E5D;
+      max-width: 400px;
+      width: 100%;
+      cursor: pointer;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      padding: 18px 0 19px 0;
+      font-family: "Playfair Display SC", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+      margin-bottom: 126px; }
+      .online-hero__container-btn:hover {
+        background: #BB8E5D; }
+
+.development {
+  margin-top: 40px;
+  margin-bottom: 100px; }
+  .development__container-label {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: #BB8E5D;
+    margin-bottom: 10px; }
+  .development__container-title {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px; }
+  .development__container-desc {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    opacity: .6;
+    margin-bottom: 77px; }
+  .development__container-plan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; }
+    .development__container-plan__block {
+      padding: 20px;
+      position: relative;
+      background: none;
+      z-index: 1; }
+      .development__container-plan__block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #2C3541;
+        opacity: .4;
+        z-index: -1; }
+      .development__container-plan__block-title {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px; }
+        .development__container-plan__block-title > p {
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 150%; }
+      .development__container-plan__block > p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 130%; }
+
+.advantages {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  .advantages__container-label {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: #BB8E5D;
+    margin-bottom: 10px; }
+  .advantages__container-title {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px; }
+  .advantages__container-desc {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    opacity: 0.6;
+    margin-bottom: 67px; }
+  .advantages__container-plan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 76px 0; }
+    .advantages__container-plan__block {
+      max-width: 660px; }
+      .advantages__container-plan__block > p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 130%; }
+      .advantages__container-plan__block-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px; }
+        .advantages__container-plan__block-title > p {
+          font-family: "Sitka Display", sans-serif;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 130%;
+          letter-spacing: 0.05em;
+          color: #BB8E5D; }
+
+.error-404 {
+  height: calc(100vh - 110px - 62px);
+  background: url("../img/404.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .error-404::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 178px;
+    background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 83.85%);
+    z-index: 1; }
+  .error-404__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%; }
+    .error-404__container-title {
+      font-family: "Zen Antique Soft", serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 92px; }
+    .error-404__container-btn {
+      padding: 18px 0 19px 0;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      position: relative;
+      z-index: 2;
+      font-family: "Playfair Display SC", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      max-width: 400px;
+      width: 100%;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #BB8E5D; }
+      .error-404__container-btn:hover {
+        background: #BB8E5D; }
+
+.legal-services__container {
+  background: url("../img/legal-services-bg.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  padding: 40px 50px; }
+  .legal-services__container-title {
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 130%;
+    letter-spacing: 0.05em; }

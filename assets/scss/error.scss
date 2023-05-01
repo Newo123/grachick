@@ -1,0 +1,64 @@
+.error-404 {
+    height: calc(100vh - 110px - 62px);
+    background: url('../img/404.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 178px;
+        background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 83.85%);
+        z-index: 1;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
+        &-title {
+            font-family: $ZenAntique;
+            font-weight: 400;
+            font-size: 52px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 92px;
+        }
+
+        &-btn {
+            padding: 18px 0 19px 0;
+            @include transition;
+
+            position: relative;
+            z-index: 2;
+
+            font-family: $Playfair;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: 0.05em;
+            max-width: 400px;
+            width: 100%;
+            cursor: pointer;
+
+            background: none;
+            border: 1px solid $gold5D;
+
+            &:hover {
+
+                background: $gold5D;
+            }
+        }
+    }
+}

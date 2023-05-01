@@ -1,0 +1,3 @@
+RewriteEngine On
+
+ErrorDocument 404 http://p2p.itlaunch.beget.tech/error.php
