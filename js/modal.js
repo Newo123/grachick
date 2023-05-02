@@ -12,6 +12,7 @@ const list = document.querySelector('.modal__content-droplist');
 const subBtn = document.querySelector('.modal__content-submit');
 const circle = document.querySelector('.modal__circle');
 const thank = document.querySelector('.thank')
+const burgerBtn = document.querySelector('.mobile-menu__info-socials-btn');
 let number = Math.ceil(Math.random() * 1000);
 
 subBtn.addEventListener('click', () => {
@@ -70,6 +71,14 @@ const closeModalWindow = () => {
 }
 
 closeBtn.addEventListener('click', closeModalWindow);
+
+burgerBtn.addEventListener('click', () => {
+    drum.style.transform = 'translateX(200%)';
+    setTimeout(() => {
+        shadow.classList.add('shadow-show');
+    }, 300)
+    modalContainer.style.transform = 'translateX(0)';
+})
 
 openBtn.addEventListener('click', () => {
     drum.style.transform = 'translateX(200%)';
