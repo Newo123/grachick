@@ -21,7 +21,7 @@ item.addEventListener('click', () => {
         secondMenu.style.maxHeight = '100%';
         link.style.color = '#BB8E5D';
     } else {
-        item.children[1].style.transform = 'rotate(0)'; 
+        item.children[1].style.transform = 'rotate(0)';
         item.children[1].classList.remove('gold-arrow');
         item.children[1].classList.add('arrow-white');
         secondMenu.style.maxHeight = '0';
@@ -30,9 +30,7 @@ item.addEventListener('click', () => {
     }
 });
 
-const openCloseMenu = (item, e) => {
-    // e.stopPorogation();
-    // e.preventDefault();
+const openCloseMenu = (item) => {
 
     if (item.children[1].style.transform !== 'rotate(90deg)') {
 
@@ -44,10 +42,43 @@ const openCloseMenu = (item, e) => {
             }
         }
 
-        setTimeout(() => {
+        item.nextElementSibling.style.maxHeight = '100%';
+        item.nextElementSibling.style.paddingBottom = '20px';
+        item.children[1].style.transform = 'rotate(90deg)';
+        item.children[1].classList.remove('arrow-white');
+        item.children[1].classList.add('gold-arrow');
+        item.children[0].style.color = '#BB8E5D';
+    } else {
 
-            item.nextElementSibling.style.overflow = 'visible';
-        }, 500);
+        for (let i = 0; i < secondMenuItem.length; i++) {
+            if (secondMenuItem[i] !== item) {
+                secondMenuItem[i].style.maxHeight = '100%';
+                secondMenuItem[i].style.overflow = 'visible';
+                secondMenuItem[i].style.paddingBottom = '20px';
+            }
+        }
+
+
+        item.nextElementSibling.style.maxHeight = '0';
+        item.nextElementSibling.style.paddingBottom = '0';
+        item.children[1].style.transform = 'rotate(0)';
+        item.children[1].classList.add('arrow-white');
+        item.children[1].classList.remove('gold-arrow');
+        item.children[0].style.color = '#ffffff';
+    }
+}
+
+const openCloseMenuThrid = (item) => {
+
+    if (item.children[1].style.transform !== 'rotate(90deg)') {
+
+        for (let i = 0; i < thridMenuItem.length; i++) {
+            if (thridMenuItem[i] !== item) {
+                thridMenuItem[i].style.maxHeight = '0';
+                thridMenuItem[i].style.overflow = 'hidden';
+                thridMenuItem[i].style.paddingBottom = '0';
+            }
+        }
 
         item.nextElementSibling.style.maxHeight = '100%';
         item.nextElementSibling.style.paddingBottom = '20px';
@@ -55,21 +86,17 @@ const openCloseMenu = (item, e) => {
         item.children[1].classList.remove('arrow-white');
         item.children[1].classList.add('gold-arrow');
         item.children[0].style.color = '#BB8E5D';
-
     } else {
 
-        setTimeout(() => {
-            for (let i = 0; i < secondMenuItem.length; i++) {
-                if (secondMenuItem[i] !== item) {
-                    secondMenuItem[i].style.maxHeight = '100%';
-                    secondMenuItem[i].style.overflow = 'visible';
-                    secondMenuItem[i].style.paddingBottom = '20px';
-                }
-    
+        for (let i = 0; i < thridMenuItem.length; i++) {
+            if (thridMenuItem[i] !== item) {
+                thridMenuItem[i].style.maxHeight = '100%';
+                thridMenuItem[i].style.overflow = 'visible';
+                thridMenuItem[i].style.paddingBottom = '20px';
             }
-        }, 300);
+        }
 
-        item.nextElementSibling.style.overflow = 'hidden';
+
         item.nextElementSibling.style.maxHeight = '0';
         item.nextElementSibling.style.paddingBottom = '0';
         item.children[1].style.transform = 'rotate(0)';
@@ -80,11 +107,11 @@ const openCloseMenu = (item, e) => {
 }
 
 for (let i = 0; i < secondMenuItem.length; i++) {
-    secondMenuItem[i].children[1].addEventListener('click', () => openCloseMenu(secondMenuItem[i]));
+    secondMenuItem[i].addEventListener('click', () => openCloseMenu(secondMenuItem[i]));
 }
 
 for (let i = 0; i < thridMenuItem.length; i++) {
-    thridMenuItem[i].children[1].addEventListener('click', () => openCloseMenu(secondMenuItem[i]));
+    thridMenuItem[i].addEventListener('click', () => openCloseMenuThrid(thridMenuItem[i]));
 }
 
 const toggleMenu = () => {
@@ -117,6 +144,6 @@ const toggleMenu = () => {
     toggleMenuBtnSpan[2].style.transform = 'translate(0, -100%) rotate(45deg)';
 }
 
-
 toggleMenuBtn.addEventListener('click', () => toggleMenu());
 menuShadow.addEventListener('click', () => toggleMenu());
+

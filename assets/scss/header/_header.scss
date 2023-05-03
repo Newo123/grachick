@@ -565,3 +565,40 @@
         }
     }
 }
+
+
+
+
+@media screen and (max-width: 1080px) {
+    .header {
+
+        &__container {
+
+            &-tel {
+                display: none;
+            }
+
+            &-nav {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .header {
+        height: 60px;
+
+        &__container {
+
+            &-logo {
+                font-size: 16px;
+            }
+
+            &-tel {}
+
+            &-nav {}
+        }
+    }
+}

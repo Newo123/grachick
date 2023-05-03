@@ -140,7 +140,8 @@
     border: 2px solid $gold5D;
     width: 960px;
     height: 600px;
-    display: flex;
+    // display: flex;
+    display: none;
     justify-content: space-between;
     box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.2);
     @include transition;
@@ -475,16 +476,15 @@
     background-image: url(../img/first-bg.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     z-index: -1;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     opacity: 1;
-
     animation: first 30s ease-in-out infinite;
 }
 
@@ -492,16 +492,15 @@
     background-image: url(../img/second-bg.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     z-index: -1;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     opacity: 0;
-
     animation: second 30s ease-in-out infinite;
 }
 
@@ -559,12 +558,12 @@
 
 
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 0;
 
     &__container {
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -640,6 +639,10 @@
 
 .services {
     margin-top: 100px;
+
+    & .hero__container-intro {
+        display: none;
+    }
 
     &__container {
         display: grid;
@@ -1417,11 +1420,92 @@
 
 
 
+@media screen and (max-width: 1500px) {
+    .team {
+        &__container {
+
+            &-cards {
+                justify-content: space-between;
+                gap: 0;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .clients {
+        &__container {
+            &-cards {
+                &__card {
+                    width: 100%;
+
+                    & a {
+                        & img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
 
 @media screen and (max-width: 1400px) {
+
+    .clients {
+        &__container {
+            &-cards {
+                &__card {
+                    height: 240px;
+                }
+            }
+        }
+    }
+
+    .team {
+        &__container {
+
+            &-cards {
+                gap: 10px;
+            }
+        }
+    }
+
+    .questions {
+
+        &__container {
+
+            &-head {
+                margin-top: 50px;
+                margin-bottom: 200px;
+            }
+        }
+
+        &__background {
+
+
+            & img {
+                width: 40%;
+            }
+        }
+    }
+
+
+    .reviews {
+        &__container {
+
+            &-title {
+                font-size: 40px;
+            }
+        }
+    }
+
     .services {
         &__container {
             gap: 25px;
@@ -1433,7 +1517,80 @@
     }
 }
 
+
+@media screen and (max-width: 1250px) {
+    .clients {
+        &__container {
+            &-cards {
+                &__card {
+                    height: 210px;
+                }
+            }
+        }
+    }
+
+    .reviews {
+        &__container {
+
+            .slider {
+                gap: 20px;
+            }
+
+            &-title {}
+        }
+    }
+
+}
+
 @media screen and (max-width: 1200px) {
+
+    .questions {
+
+        &__container {
+
+            &-tabs {
+                gap: 0;
+                justify-content: space-around;
+
+                &__tab {
+                    font-size: 48px;
+                }
+            }
+
+            &-head {
+                gap: 20px;
+
+                &__company {
+                    font-size: 22px;
+                }
+
+                &__title {
+                    font-size: 28px;
+                    max-width: 450px;
+                }
+            }
+        }
+
+        &__background {
+
+
+            & img {}
+        }
+    }
+
+    .reviews {
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 38px;
+
+            .slider {}
+
+            &-title {}
+        }
+    }
+
     .services {
         &__container {
             gap: 25px;
@@ -1445,14 +1602,236 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+
+
+    .clients {
+        &__container {
+            &-cards {
+                &__card {
+                    height: 170px;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 875px) {
+
+    .hero {
+
+        &__container {
+            &-intro {
+                justify-content: space-between;
+
+                &__block {
+                    &-title {
+                        font-size: 30px;
+                    }
+
+                    &-desc {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .clients {
+        &__container {
+
+            &-title {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            &-desc {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            &-cards {
+
+                &__card {
+                    height: 170px;
+
+                    & a {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .team {
+
+        &__container {
+
+            &-title {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            &-desc {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .questions {
+
+        &__container {
+            gap: 20px;
+
+            &-tabs {
+                justify-content: space-between;
+                margin-bottom: 0;
+
+                &__tab {}
+            }
+
+            &-head {
+                gap: 10px;
+                margin-top: 0;
+
+                &__company {}
+
+                &__title {}
+            }
+        }
+
+        &__background {
+
+
+            & img {}
+        }
+    }
+
+    .reviews {
+        &__container {
+
+            .slider {
+                .btns {
+                    display: none;
+                }
+            }
+
+            &-slider {
+
+                &__wrapper {
+
+
+                    &-slide {
+
+                        &__content {
+                            margin: 10px;
+
+                            &-name {
+                                margin-left: 70px;
+                            }
+
+                            &-country {
+                                margin-left: 70px;
+                                margin-bottom: 10px;
+                            }
+
+                            &-desc {
+                                grid-area: desc;
+                            }
+                        }
+
+                        & img {
+                            width: 50px;
+                            height: 50px;
+                            margin: 0;
+                            grid-area: img;
+                            position: absolute;
+                            left: 10px;
+                            top: 10px;
+                        }
+                    }
+                }
+
+
+            }
+
+            &-title {}
+        }
+    }
+
+    .how {
+
+        &__container {
+            gap: 28px;
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-blogs {
+                gap: 30px;
+            }
+        }
+    }
+
     .services {
         &__container {
             gap: 25px;
 
             &-link {
                 height: 233px;
+
+                &__text {
+                    font-size: 28px;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .clients {
+        &__container {
+
+            &-title {}
+
+            &-cards {
+                gap: 4px;
+
+                &__card {
+                    height: 110px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    .questions {
+
+
+        &__container {
+            &-block {
+                &__card {
+                    grid-template-areas:
+                        "title btn"
+                        "desc desc";
+
+                    &-desc {
+                        font-size: 22px;
+
+                    }
+
+                    &-content {
+                        &__title {
+                            font-size: 22px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1460,7 +1839,154 @@
 
 
 @media screen and (max-width: 650px) {
+
+    .clients {
+        &__container {
+
+            &-title {}
+
+            &-cards {
+
+                &__card {
+                    height: 110px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    .team {
+
+        &__container {
+            &-desc {
+                margin-bottom: 20px;
+            }
+
+            &-cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .questions {
+
+        &__container {
+
+            &-tabs {
+
+                &__tab {
+                    font-size: 28px;
+                }
+            }
+
+            &-head {
+
+                &__company {
+                    font-size: 18px;
+                }
+
+                &__title {
+                    font-size: 20px;
+                    max-width: 350px;
+                }
+            }
+        }
+
+        &__background {
+            top: 47px;
+
+            & img {}
+        }
+    }
+
+
+    .increase {
+        height: 408px;
+
+        &__container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            &-card {
+                padding: 30px 20px;
+
+                &__logo {
+                    font-size: 14px;
+                }
+
+                &__title {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                &__desc {
+                    font-size: 16px;
+                    margin-bottom: 50px;
+                }
+
+                &__btn {
+                    font-size: 16px;
+                    width: auto;
+                    padding: 18px 20px 19px 20px;
+                }
+            }
+        }
+    }
+
+    .how {
+
+        &__container {
+
+            &-title {}
+
+            &-blogs {
+                grid-template-columns: 1fr;
+
+                &__block {
+                    gap: 10px;
+
+                    &-desc {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        & .hero__container-intro {
+            display: none;
+        }
+
+        &__container {
+            &-intro {
+                flex-direction: column;
+                gap: 24px;
+                margin-bottom: 40px;
+
+                &__block {
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-desc {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
     .services {
+        margin-top: 0;
+
+        & .hero__container-intro {
+            display: flex;
+        }
+
         &__container {
             gap: 10px;
             grid-template-columns: repeat(2, 1fr);
@@ -1472,15 +1998,337 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .clients {
+        &__container {
+
+            &-title {}
+
+            &-cards {
+
+                &__card {
+                    height: 85px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 480px) {
-    .services {
+
+    .drop {
         margin-top: 40px;
+
+        &__container {
+            &-title {
+                font-size: 16px;
+            }
+
+            &-content {
+                font-size: 16px;
+            }
+
+            &-button {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .clients {
+        &__container {
+
+            &-title {
+                font-size: 18px;
+                margin-left: 45px;
+                position: relative;
+
+                &::before {
+                    content: '”';
+                    font-family: 'Playfair Display SC';
+                    font-weight: 400;
+                    font-size: 60px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    position: absolute;
+                    top: -17px;
+                    left: -40px;
+
+                }
+            }
+
+            &-cards {
+
+                &__card {
+                    height: 75px;
+                }
+            }
+        }
+    }
+
+    .clients {
+        margin-top: 40px;
+    }
+
+    .team {
+        margin-top: 40px;
+
+        &__container {
+            &-desc {}
+
+            &-title {
+                font-size: 18px;
+                margin-left: 45px;
+                position: relative;
+
+                &::before {
+                    content: '”';
+                    font-family: 'Playfair Display SC';
+                    font-weight: 400;
+                    font-size: 60px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    position: absolute;
+                    top: -17px;
+                    left: -40px;
+                }
+            }
+
+            &-cards {
+                gap: 20px 10px;
+
+                &__card {
+
+                    &-img {
+                        margin-bottom: 20px;
+                    }
+
+                    &-name {
+                        margin-bottom: 6px;
+                        font-size: 16px;
+                    }
+
+                    &-job {
+                        font-size: 16px;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    .questions {
+
+        &__container {
+            &-block {
+
+                margin: 0 -20px;
+
+                &__card {
+
+                    &-desc {
+                        font-size: 14px;
+                    }
+
+                    &-content {
+
+                        &__title {
+                            font-size: 14px;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            margin-left: 20px;
+                            margin-right: 0;
+
+                            &-btn {
+                                margin-top: 20px;
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 20px;
+
+                                &-cube {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+
+                                & svg {
+                                    width: 17px;
+                                    height: 30px;
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-tabs {
+
+                &__tab {
+                    font-size: 20px;
+                }
+            }
+
+            &-head {
+
+                &__company {
+                    font-size: 14px;
+                }
+
+                &__title {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__background {
+
+            & img {
+                width: 45%;
+            }
+        }
+    }
+
+
+    .questions {
+        margin-top: 40px;
+    }
+
+    .reviews {
+
+        margin-top: 40px;
+
+        &__container {
+            align-items: center;
+
+            .slider {
+                .btns {
+                    display: none;
+                }
+            }
+
+            &-slider {
+                max-height: 250px;
+
+                &__wrapper {
+
+
+                    &-slide {
+
+
+                        &__content {
+                            margin: 10px;
+
+                            &-name {
+                                margin-left: 70px;
+                            }
+
+                            &-country {
+                                margin-left: 70px;
+                                margin-bottom: 10px;
+                            }
+
+                            &-desc {
+                                font-size: 16px;
+                            }
+                        }
+
+                        & img {
+                            width: 50px;
+                            height: 50px;
+                            margin: 0;
+                            grid-area: img;
+                            position: absolute;
+                            left: 10px;
+                            top: 10px;
+                        }
+                    }
+                }
+
+
+            }
+
+            &-title {
+                font-size: 18px;
+                position: relative;
+
+                &::before {
+                    content: '”';
+                    font-family: 'Playfair Display SC';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 60px;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    position: absolute;
+                    top: -17px;
+                    left: -40px;
+                }
+            }
+        }
+    }
+
+
+
+    .increase {
+        margin-top: 40px;
+
+        &__container {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .how {
+        margin-top: 40px;
+
+        &__container {
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-blogs {
+
+                &__block {
+                    &-title {
+                        & p {
+                            font-size: 22px;
+                        }
+                    }
+
+                    &-desc {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+
+        & .hero__container-intro {
+            display: none;
+        }
+    }
+
+    .services {
+        margin-top: 0;
+
+        & .hero__container-intro {
+            display: flex;
+        }
 
         &__container {
             gap: 10px;
 
             &-link {
                 height: 190px;
+
+                &__text {
+                    font-size: 16px;
+
+                }
             }
         }
     }
@@ -1531,6 +2379,19 @@
 
 
 @media screen and (max-width: 400px) {
+
+    .clients {
+        &__container {
+
+            &-cards {
+
+                &__card {
+                    height: 60px;
+                }
+            }
+        }
+    }
+
     .services {
         margin-top: 40px;
 
@@ -1539,6 +2400,43 @@
 
             &-link {
                 height: 155px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .drum {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .questions {
+
+        &__container {
+
+            &-tabs {
+
+                &__tab {}
+            }
+
+            &-head {
+
+                &__company {}
+
+                &__title {}
+            }
+        }
+
+        &__background {
+
+            & img {
+                width: 50%;
             }
         }
     }

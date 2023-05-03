@@ -7,7 +7,7 @@
 
     &__container {
         display: grid;
-        grid-template-columns:  auto 1fr;
+        grid-template-columns: auto 1fr;
         align-items: center;
         height: 100%;
 
@@ -16,6 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+
             &__card {
                 display: flex;
                 align-items: center;
@@ -47,7 +48,7 @@
                 }
             }
         }
-        
+
         &-left {
             height: 100%;
             display: flex;
@@ -59,13 +60,14 @@
                 display: flex;
                 align-items: center;
                 gap: 60px;
-                
+
                 &-link {
                     font-family: $Inter;
                     font-weight: 400;
                     font-size: 12px;
                     line-height: 140%;
                     color: #4d4d4d;
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -99,6 +101,104 @@
                     display: flex;
                     align-items: center;
                     gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        height: auto;
+        padding-bottom: 0;
+
+        &__container {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 40px;
+
+            &-left {
+                width: 100%;
+
+                &__social {
+                    margin-bottom: 10px;
+                    align-self: center;
+                    width: 100%;
+                    align-items: center;
+                }
+
+                &__policy {
+                    gap: 0;
+                    justify-content: space-between;
+                }
+            }
+
+            &-contacts {
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer {
+        padding-top: 20px;
+
+        &__container {
+            gap: 50px;
+
+            &-left {
+                &__social {
+                    gap: 10px;
+                }
+            }
+
+            &-contacts {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+
+        &__container {
+
+            &-left {
+                &__social {
+
+                    &-logo {
+                        font-size: 16px;
+                    }
+
+                    &-mask {
+                        gap: 20px;
+
+                        & img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            &-contacts {
+
+                &__card {
+
+                    &-title {
+                        margin-bottom: 10px;
+                    }
+
+                    &-img {
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 6px;
+                    }
                 }
             }
         }
