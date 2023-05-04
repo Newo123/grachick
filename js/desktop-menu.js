@@ -1,0 +1,1 @@
+const deskMenu = document.querySelector('.second__menu');

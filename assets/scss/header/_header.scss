@@ -42,10 +42,11 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.4);
-    background-blend-mode: overlay;
+    background: #000000;
+    // background: rgba(0, 0, 0, 0.4);
+    // background-blend-mode: overlay;
 
-    backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
     z-index: 10;
 
     &__container {
@@ -339,7 +340,9 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
+    // background-color: rgba(0, 0, 0, .8);
+    background: #000000;
+
     max-height: 0;
     overflow: hidden;
 
@@ -357,6 +360,11 @@
             max-width: 3000%;
             padding: 30px 0;
             overflow: visible;
+            
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             &-item {
                 padding-right: 44px;
@@ -432,7 +440,9 @@
     min-height: 100%;
 
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .8);
+    // background-color: rgba(0, 0, 0, .8);
+    background: #000000;
+
     max-width: 0;
     @include transition;
 
@@ -521,7 +531,9 @@
     min-height: 100%;
 
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .8);
+    // background-color: rgba(0, 0, 0, .8);
+    background: #000000;
+
     max-width: 0;
     @include transition;
 
