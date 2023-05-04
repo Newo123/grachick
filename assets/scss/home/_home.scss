@@ -146,7 +146,7 @@
     box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.2);
     @include transition;
 
-    & > .modal__content-submit-two {
+    &>.modal__content-submit-two {
         display: none;
     }
 
@@ -2461,6 +2461,7 @@
         justify-content: flex-start;
         max-width: 960px;
         width: 100%;
+
         &__circle {
             width: 360px;
             height: 360px;
@@ -2477,13 +2478,16 @@
                     & .one__text {
                         margin-left: 10px;
                     }
+
                     & .two__text {
                         transform: rotate(-45deg) translateX(-40px);
                     }
+
                     & .three__text {
                         transform: rotate(135deg) translateX(-14px);
                         max-width: 140px;
                     }
+
                     & .four__text {
                         margin-left: 10px;
                     }
@@ -2495,18 +2499,22 @@
                     top: 151px;
                     left: 348px;
                 }
+
                 &__top {
                     left: 147px;
                 }
+
                 &__left {
                     top: 183px;
                 }
+
                 &__bot {
                     top: 353px;
                     left: 180px;
                 }
             }
         }
+
         &__content {
 
             &-submit {
@@ -2546,9 +2554,9 @@
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-areas:
-        "title title"
-        "drum target"
-        "sub sub";
+            "title title"
+            "drum target"
+            "sub sub";
         max-width: 350px;
         height: auto;
         padding: 20px 14px 17px 14px;
@@ -2568,6 +2576,7 @@
         &__content-droplist {
             top: 189px;
             z-index: 2000;
+
             // backdrop-filter: blur(0);
             // background-color: #000000;
             &__item {
@@ -2576,7 +2585,7 @@
             }
         }
 
-        & > .modal__content-submit-two {
+        &>.modal__content-submit-two {
             display: block;
             grid-area: sub;
             height: 60px;
@@ -2598,11 +2607,13 @@
 
         &__target-drum {
             grid-area: target;
+
             & svg {
                 width: 24px;
                 height: 16px;
             }
         }
+
         &__circle {
             grid-area: drum;
             width: 280px;
@@ -2619,11 +2630,12 @@
 
             &-content {
 
-                
+
 
                 & .one {
                     transform: rotate(-135deg) translateX(-7px);
                 }
+
                 & .four {
                     transform: rotate(45deg) translateX(-6px);
                 }
@@ -2637,6 +2649,7 @@
 
                         letter-spacing: 0;
                     }
+
                     & .two__text {
                         font-size: 16px;
                         letter-spacing: 0;
@@ -2644,6 +2657,7 @@
 
                         transform: rotate(-45deg) translateX(-28px);
                     }
+
                     & .three__text {
                         font-size: 16px;
                         max-width: 100px;
@@ -2651,6 +2665,7 @@
                         letter-spacing: 0;
 
                     }
+
                     & .four__text {
                         margin-left: 0;
                         font-size: 16px;
@@ -2669,18 +2684,21 @@
                     width: 12px;
                     height: 7px;
                 }
+
                 &__top {
                     top: -15px;
                     left: 113px;
                     width: 12px;
                     height: 7px;
                 }
+
                 &__left {
                     left: -19px;
                     top: 141px;
                     width: 12px;
                     height: 7px;
                 }
+
                 &__bot {
                     top: 273px;
                     left: 140px;
@@ -2689,9 +2707,11 @@
                 }
             }
         }
+
         &__content.modal__content-submit {
             display: none;
         }
+
         &__content {
             grid-area: title;
             margin: 0;
@@ -2699,12 +2719,12 @@
             &-close {
                 z-index: 50000;
             }
-           
+
             &-title {
                 font-size: 18px;
                 margin-bottom: 20px;
                 text-align: center;
-                
+
             }
 
             &-desc {
@@ -2722,6 +2742,7 @@
             &-dropbtn {
                 margin-bottom: 20px;
                 height: 60px;
+
                 & p {
                     font-weight: 300;
                     font-size: 14px;

@@ -12,10 +12,71 @@
     right: 0;
     bottom: 0;
     height: 178px;
-    background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 83.85%); }
+    background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 83.85%);
+    z-index: 1; }
   .error-404__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     height: 100%; }
+    .error-404__container-title {
+      font-family: "Zen Antique Soft", serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 92px; }
+    .error-404__container-btn {
+      padding: 18px 0 19px 0;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      position: relative;
+      z-index: 2;
+      font-family: "Playfair Display SC", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      max-width: 400px;
+      width: 100%;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #BB8E5D; }
+      .error-404__container-btn:hover {
+        background: #BB8E5D; }
+
+@media screen and (max-width: 1200px) {
+  .error-404 {
+    height: 70vh; } }
+
+@media screen and (max-width: 1024px) {
+  .error-404 {
+    height: 50vh; } }
+
+@media screen and (max-width: 768px) {
+  .error-404 {
+    height: 40vh; }
+    .error-404::before {
+      height: 60px; } }
+
+@media screen and (max-width: 600px) {
+  .error-404 {
+    height: 36vh; }
+    .error-404__container {
+      transform: translateY(50px);
+      position: relative;
+      z-index: 4; }
+      .error-404__container-title {
+        font-size: 38px;
+        margin-bottom: 39px; } }
+
+@media screen and (max-width: 435px) {
+  .error-404__container-title {
+    font-size: 20px; }
+  .error-404__container-btn {
+    font-size: 18px; } }

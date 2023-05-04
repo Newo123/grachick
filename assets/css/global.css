@@ -328,3 +328,7 @@ template {
    */
 [hidden] {
   display: none; }
+
+@media screen and (max-width: 560px) {
+  main {
+    margin-top: 60px; } }

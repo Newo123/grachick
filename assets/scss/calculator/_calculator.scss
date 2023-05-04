@@ -351,3 +351,212 @@
     max-height: auto;
     padding: 30px;
 }
+
+@media screen and (max-width: 1320px) {
+    .calculate {
+
+        &__container {
+
+            &-content {
+                grid-template-columns: 1fr;
+
+                &__btns {
+                    z-index: 20;
+
+                    // &-content {
+                    //     grid-template-columns: 1fr;
+                    // }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 815px) {
+    .calculate {
+
+        &__container {
+
+            &-header {
+
+                &__title {
+                    font-size: 40px;
+                }
+            }
+
+            &-content {
+
+                &__btns {
+                    height: auto;
+
+                    &-content {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav {
+
+        &__container {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+
+            & a {
+                font-size: 12px;
+            }
+
+            & img {
+                width: 8px;
+                height: 12px;
+            }
+
+            & a:last-child {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .calculate {
+
+        &__container {
+            gap: 20px;
+
+            &-header {
+
+                &__title {
+                    font-size: 16px;
+                }
+
+                &__info {
+                    font-size: 10px;
+                }
+            }
+
+            &-content {
+                margin-left: -20px;
+                margin-right: -20px;
+                gap: 10px;
+
+                &__form {
+                    padding: 20px;
+
+                    &-title {
+                        margin-bottom: 20px;
+                        font-size: 10px;
+                    }
+
+                    &-input {
+                        margin-bottom: 40px;
+                        font-size: 14px;
+                    }
+
+                    &-price {
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+
+                    &-btn {
+                        margin-bottom: 20px;
+                        font-size: 18px;
+                    }
+
+                    &-personal {
+                        font-size: 10px;
+                    }
+                }
+
+                &__btns {
+
+                    &-content {
+                        padding: 20px;
+                        gap: 20px;
+                    }
+
+                    &-type {
+
+                        &-title {
+                            margin-bottom: 19px;
+                            font-size: 10px;
+                        }
+
+                        &-btn {
+                            padding: 21px 20px;
+
+                            & p {
+                                font-size: 14px;
+                            }
+
+                            border: 0.2px solid $gold5D;
+                        }
+                    }
+
+                    &-development {
+
+                        &-title {
+                            margin-bottom: 19px;
+                            font-size: 10px;
+                        }
+
+                        &-btn {
+                            padding: 21px 20px;
+
+                            & p {
+                                font-size: 14px;
+                            }
+
+                            border: 0.2px solid $gold5D;
+                        }
+                    }
+
+                    &-count {
+
+                        &-title {
+                            margin-bottom: 19px;
+                            font-size: 10px;
+                        }
+
+                        &-btn {
+                            padding: 21px 20px;
+
+                            & p {
+                                font-size: 14px;
+                            }
+
+                            border: 0.2px solid $gold5D;
+                        }
+                    }
+
+                    &-terms {
+
+                        &-title {
+                            margin-bottom: 19px;
+                            font-size: 10px;
+                        }
+
+                        &-btn {
+                            padding: 21px 20px;
+
+                            & p {
+                                font-size: 14px;
+                            }
+
+                            border: 0.2px solid $gold5D;
+                        }
+                    }
+
+                    &-reload {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

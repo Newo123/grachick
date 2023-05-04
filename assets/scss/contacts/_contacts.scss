@@ -7,6 +7,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 178px;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(10, 25, 33, 0) 0%, #0A1921 76.04%);
+    }
 }
 
 
@@ -74,6 +84,232 @@
                         letter-spacing: 0.05em;
                         text-transform: capitalize;
                         color: $black4E;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    .contacts-hero {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .contacts-hero {
+        height: 60vh;
+    }
+
+    .contacts {
+
+
+        &__container {
+
+
+            &-info {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px 0;
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .contacts {
+
+
+        &__container {
+
+
+            &-info {
+                grid-template-columns: auto auto 1fr;
+                gap: 30px;
+
+                &__social {
+                    grid-area: 1 / 3 / 3;
+                    justify-self: center;
+                }
+
+            }
+        }
+    }
+
+    .contacts-hero {
+        height: 50vh;
+
+        &::before {
+            height: 130px;
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .contacts {
+
+
+        &__container {
+
+            &-title {
+                font-size: 40px;
+            }
+
+
+            &-info {
+                grid-template-columns: repeat(2, 1fr);
+
+                &__social {
+                    grid-area: auto;
+                    justify-self: flex-start;
+                }
+
+            }
+        }
+    }
+
+    .contacts-hero {
+        height: 37vh;
+
+        &::before {
+            height: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .contacts {
+
+
+        &__container {
+
+            &-title {
+                font-size: 40px;
+            }
+
+
+            &-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+            }
+        }
+    }
+
+    .contacts-hero {
+        height: 30vh;
+
+        &::before {
+            height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contacts {
+
+        & iframe {
+            height: 240px;
+        }
+
+        &__container {
+            margin-bottom: 40px;
+
+            &-title {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
+
+            &-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                &__social {
+
+                    &-icons {
+                        gap: 22px;
+                    }
+                }
+
+                &__block {
+                    gap: 20px;
+
+                    &-text {
+                        gap: 10px;
+                    }
+                }
+
+                &__block:nth-child(4) {
+                    & img {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contacts-hero {
+        height: 21.7vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contacts {
+        &__container {
+
+            &-title {}
+
+
+            &-info {
+
+                &__social {
+
+                    &-icons {
+                        & a {
+
+                            & img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+
+                    & p {
+                        font-size: 16px;
+                    }
+                }
+
+                &__block:nth-child(4) {
+                    & img {
+                        margin-left: 0;
+                        margin-right: 10px;
+                    }
+                }
+
+                &__block {
+
+                    & img {
+                        width: 26px;
+                        height: 26px;
+                    }
+
+                    &-text {
+                        & p:first-child {
+                            font-size: 16px;
+                        }
+
+                        & p:last-child {
+                            font-size: 16px;
+                        }
                     }
                 }
             }

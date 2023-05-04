@@ -1,3 +1,6 @@
+@import './vars.scss';
+@import './mixins.scss';
+
 .error-404 {
     height: calc(100vh - 110px - 62px);
     background: url('../img/404.png');
@@ -58,6 +61,65 @@
             &:hover {
 
                 background: $gold5D;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .error-404 {
+        height: 70vh;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .error-404 {
+        height: 50vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .error-404 {
+        height: 40vh;
+
+        &::before {
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error-404 {
+        height: 36vh;
+
+        &__container {
+
+            transform: translateY(50px);
+            position: relative;
+            z-index: 4;
+
+            &-title {
+                font-size: 38px;
+                margin-bottom: 39px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .error-404 {
+
+        &__container {
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-btn {
+                font-size: 18px;
             }
         }
     }
