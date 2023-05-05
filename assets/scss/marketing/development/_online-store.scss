@@ -214,3 +214,239 @@
         }
     }
 }
+
+@media screen and (max-width: 1160px) {
+    .development {
+
+        &__container {
+            &-plan {
+                gap: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .online-hero {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .development {
+
+        &__container {
+            &-plan {
+                gap: 40px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .online-hero {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .advantages {
+        &__container {
+            &-title {
+                font-size: 40px;
+            }
+
+            &-plan {
+                gap: 20px;
+
+                &__block {
+                    & > p {
+                        font-size: 16px;
+                    }
+                    &-title {
+                    }
+                }
+            }
+        }
+    }
+
+    .development {
+
+        &__container {
+            &-title {
+                font-size: 40px;
+            }
+
+            &-desc {
+                margin-bottom: 20px;
+            }
+            &-plan {
+                gap: 10px;
+                &__block {
+
+                    & > p {
+
+                        font-size: 16px;
+                        opacity: 0.6;
+                    }
+
+                    &-title {
+                        gap: 16px;
+                        margin-bottom: 16px;
+
+                        & img {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        & p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        &__container {
+            
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            & a {
+                white-space: nowrap;
+            }
+        }
+    }
+    .online-hero {
+        height: 320px;
+        &__container {
+            justify-content: center;
+            &-title {
+                font-size: 30px;
+                text-align: center;
+                margin-top: 28px;
+            }
+
+            &-btn {
+                position: relative;
+                z-index: 2;
+                margin-bottom: 0;
+            }
+        }
+
+        &::before {
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .advantages {
+        &__container {
+            &-title {
+            }
+
+            &-plan {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .development {
+
+        &__container {
+            &-plan {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .advantages {
+        &__container {
+            &-label {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            &-title {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            &-desc {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            &-plan {
+            }
+        }
+    }
+
+     .advantages {
+        margin-top: 40px;
+     }
+
+    .development {
+        &__container {
+            &-label {
+                font-size: 10px;
+            }
+            &-title {
+                font-size: 16px;
+            }
+
+            &-desc {
+                font-size: 16px;
+            }
+
+            &-plan {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+        }
+    }
+
+    .online-hero {
+        background: url('../img/mobile-online-store-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 100px;
+        height: 300px;
+        &__container {
+            grid-template-columns: 1fr;
+            &-title {
+                font-size: 16px;
+            }
+
+            &-btn {
+                width: 100%;
+                max-width: 100%;
+                font-size: 18px;
+                transform: translateY(50px);
+            }
+        }
+
+        &::before {
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .online-hero {
+        height: 260px;
+    }
+}
