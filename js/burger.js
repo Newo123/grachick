@@ -115,7 +115,6 @@ for (let i = 0; i < thridMenuItem.length; i++) {
 }
 
 const toggleMenu = () => {
-    console.log(menu.style.transform)
     if (menu.style.transform === 'translateX(100%)') {
         menu.style.transform = 'translateX(0)';
         menuShadow.style.display = 'block';
@@ -147,3 +146,4 @@ const toggleMenu = () => {
 toggleMenuBtn.addEventListener('click', () => toggleMenu());
 menuShadow.addEventListener('click', () => toggleMenu());
 
+// export default toggleMenu;

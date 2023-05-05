@@ -16,6 +16,7 @@ const thank = document.querySelector('.thank')
 const burgerBtn = document.querySelector('.mobile-menu__info-socials-btn');
 let number = Math.ceil(Math.random() * 1000);
 
+
 subBtnTwo.addEventListener('click', () => {
 
     if (subBtnTwo.innerHTML === 'Вращать колесо') {
@@ -23,27 +24,27 @@ subBtnTwo.addEventListener('click', () => {
         number += Math.ceil(Math.min(360, Math.random * 1000) ? Math.min(360, Math.random * 1000) : 460);
         const input = document.createElement('input');
         document.querySelector('.modal__content').replaceChild(input, dropList);
-        
+
         input.classList.add('modal__content-input')
-    
+
         document.querySelector('.modal__content-input').setAttribute('placeholder', '+7 (000) 000-00-00');
         document.querySelector('.modal__content-input').setAttribute('type', 'tel');
         document.querySelector('.modal__content-input').setAttribute('name', 'tel');
         document.querySelector('.modal__content-input').setAttribute('data-validate-field', 'tel');
         document.querySelector('.modal__content-input').setAttribute('title', 'Используйте числовой формат ввода!');
         document.querySelector('.modal__content-input').setAttribute('id', 'telefon');
-    
+
         let tel = document.getElementById('telefon');
         let maskOptions = {
             mask: '+7 (000) 000-00-00',
             lazy: false,
         }
         let mask = IMask(tel, maskOptions);
-    
+
         subBtnTwo.setAttribute('disabled', '');
         subBtnTwo.style.opacity = '0.5';
         subBtnTwo.innerHTML = 'Отправить';
-    
+
         setTimeout(() => {
             subBtnTwo.removeAttribute('disabled');
             subBtnTwo.style.opacity = '1';
@@ -68,30 +69,30 @@ subBtn.addEventListener('click', () => {
         number += Math.ceil(Math.random * 1000);
         const input = document.createElement('input');
         document.querySelector('.modal__content').replaceChild(input, dropList);
-        
+
         input.classList.add('modal__content-input')
-    
+
         document.querySelector('.modal__content-input').setAttribute('placeholder', '+7 (000) 000-00-00');
         document.querySelector('.modal__content-input').setAttribute('type', 'tel');
         document.querySelector('.modal__content-input').setAttribute('name', 'tel');
         document.querySelector('.modal__content-input').setAttribute('data-validate-field', 'tel');
         document.querySelector('.modal__content-input').setAttribute('title', 'Используйте числовой формат ввода!');
         document.querySelector('.modal__content-input').setAttribute('id', 'telefon');
-    
+
         let tel = document.getElementById('telefon');
         let maskOptions = {
             mask: '+7 (000) 000-00-00',
             lazy: false,
         }
         let mask = IMask(tel, maskOptions);
-    
+
         subBtn.setAttribute('disabled', '');
         subBtn.classList.remove('hover-btn');
         subBtn.innerHTML = 'Отправить';
-    
+
         setTimeout(() => {
-        subBtn.removeAttribute('disabled');
-        subBtn.classList.add('hover-btn');
+            subBtn.removeAttribute('disabled');
+            subBtn.classList.add('hover-btn');
         }, 3000);
 
     } else if (subBtn.innerHTML === 'Отправить') {
@@ -120,6 +121,7 @@ const closeModalWindow = () => {
 closeBtn.addEventListener('click', closeModalWindow);
 
 burgerBtn.addEventListener('click', () => {
+    toggleMenu();
     drum.style.transform = 'translateX(200%)';
     setTimeout(() => {
         shadow.classList.add('shadow-show');
@@ -152,7 +154,7 @@ const Undis = () => {
     subBtnTwo.removeAttribute('disabled');
     subBtn.classList.add('hover-btn');
     subBtnTwo.style.opacity = '1';
-    
+
 }
 
 
@@ -169,11 +171,11 @@ for (let i = 0; i < listItem.length; i++) {
 
 
 for (let i = 0; i < btn.length; i++) {
-    btnDrop[i].addEventListener('click', function() {
+    btnDrop[i].addEventListener('click', function () {
         this.classList.toggle('active-dropdown');
 
         let content = this.nextElementSibling;
-    
+
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
             content.style.overflow = 'hidden';

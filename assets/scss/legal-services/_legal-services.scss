@@ -22,3 +22,116 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1200px) {
+
+    .legal-services {
+
+
+        &__container {
+            height: 420px;
+
+            &-title {}
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .legal-services {
+
+
+        &__container {
+            height: 370px;
+
+            &-title {}
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .legal-services {
+
+
+        &__container {
+            height: 300px;
+
+            &-title {
+                font-size: 40px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .legal-services {
+        margin-bottom: 40px;
+
+
+
+        &__container {
+            height: 250px;
+
+            &-title {
+                font-size: 30px;
+            }
+
+            &-title {}
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .legal-services {
+        margin-bottom: 40px;
+
+
+
+        &__container {
+            background: url('../img/legal-mobile.png') no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 250px;
+            padding: 0;
+            padding-top: 28px;
+
+            &-title {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            &-title {}
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .legal-services {
+
+
+
+        &__container {
+            height: 200px;
+
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+
+}

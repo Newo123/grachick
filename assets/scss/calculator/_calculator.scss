@@ -131,6 +131,10 @@
                         overflow: hidden;
                         // padding: 30px;
 
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
                         background-color: rgba(0, 0, 0, .4);
                         backdrop-filter: blur(10px);
                         @include transition;
@@ -386,13 +390,18 @@
             }
 
             &-content {
+                max-height: 2000px;
 
                 &__btns {
                     height: auto;
+                    max-height: 2000px;
+
 
                     &-content {
+
                         display: flex;
                         flex-direction: column;
+                        gap: 40px;
                     }
                 }
             }

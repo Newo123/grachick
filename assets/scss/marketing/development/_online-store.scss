@@ -264,11 +264,11 @@
                 gap: 20px;
 
                 &__block {
-                    & > p {
+                    &>p {
                         font-size: 16px;
                     }
-                    &-title {
-                    }
+
+                    &-title {}
                 }
             }
         }
@@ -284,11 +284,13 @@
             &-desc {
                 margin-bottom: 20px;
             }
+
             &-plan {
                 gap: 10px;
+
                 &__block {
 
-                    & > p {
+                    &>p {
 
                         font-size: 16px;
                         opacity: 0.6;
@@ -311,23 +313,28 @@
             }
         }
     }
+
     .nav {
-        display: flex;
         &__container {
-            
+
             overflow-x: scroll;
+
             &::-webkit-scrollbar {
                 display: none;
             }
+
             & a {
                 white-space: nowrap;
             }
         }
     }
+
     .online-hero {
         height: 320px;
+
         &__container {
             justify-content: center;
+
             &-title {
                 font-size: 30px;
                 text-align: center;
@@ -350,8 +357,7 @@
 @media screen and (max-width: 630px) {
     .advantages {
         &__container {
-            &-title {
-            }
+            &-title {}
 
             &-plan {
                 grid-template-columns: 1fr;
@@ -380,6 +386,7 @@
                 font-size: 10px;
                 margin-bottom: 10px;
             }
+
             &-title {
                 font-size: 16px;
                 margin-bottom: 10px;
@@ -390,20 +397,20 @@
                 margin-bottom: 25px;
             }
 
-            &-plan {
-            }
+            &-plan {}
         }
     }
 
-     .advantages {
+    .advantages {
         margin-top: 40px;
-     }
+    }
 
     .development {
         &__container {
             &-label {
                 font-size: 10px;
             }
+
             &-title {
                 font-size: 16px;
             }
@@ -426,8 +433,10 @@
         background-size: cover;
         margin-bottom: 100px;
         height: 300px;
+
         &__container {
             grid-template-columns: 1fr;
+
             &-title {
                 font-size: 16px;
             }
@@ -440,8 +449,7 @@
             }
         }
 
-        &::before {
-        }
+        &::before {}
     }
 }
 

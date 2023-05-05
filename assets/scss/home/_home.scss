@@ -133,6 +133,11 @@
     z-index: 1;
 }
 
+.link {
+    display: block;
+    width: 100%;
+}
+
 .modal {
     position: relative;
     z-index: 14;
@@ -492,7 +497,7 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    animation: first 30s ease-in-out infinite;
+    animation: first 20s ease-in-out infinite;
 }
 
 .second-bg {
@@ -508,7 +513,7 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    animation: second 30s ease-in-out infinite;
+    animation: second 20s ease-in-out infinite;
 }
 
 @keyframes first {
@@ -565,9 +570,10 @@
 
 
 .hero {
-    height: 100vh;
+    height: calc(100vh - 110px);
     position: relative;
     z-index: 0;
+    max-height: 1080px;
 
     &__container {
         height: 100%;
@@ -830,6 +836,163 @@
     background-size: cover;
     background-position: center center;
     height: 600px;
+    position: relative;
+
+    & .form-thinks {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        align-items: center;
+        justify-content: center;
+        background: $bg21;
+        max-width: 536px;
+        width: 100%;
+        padding: 80px 45px 106px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 51;
+        border: 2px solid #BB8E5D;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        display: none;
+
+        & p {
+            font-family: 'Playfair Display SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: 0.05em;
+            color: #BB8E5D;
+            max-width: 446px;
+            width: 100%;
+        }
+    }
+
+    & .form-shadow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 50;
+        display: none;
+    }
+
+    &__form {
+        border: 2px solid #BB8E5D;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../img/form-bg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        max-width: 536px;
+        width: 100%;
+        padding: 38px 50px 36px;
+        gap: 30px;
+        z-index: 50;
+        display: none;
+
+        &-close {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 34px;
+            right: 40px;
+            cursor: pointer;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                border-radius: 4px;
+                background: $gold5D;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+        }
+
+        &-title {
+            font-family: 'Playfair Display SC';
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            color: #BB8E5D;
+            margin-bottom: 25px;
+        }
+
+        &-input {
+            background: none;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 130%;
+            color: #B3B3B3;
+            border-bottom: 1px solid $gold5D;
+            margin-bottom: 37px;
+        }
+
+        &-btn {
+            width: 100%;
+            padding: 18px 0 19px 0;
+            background: none;
+            border: 1px solid $gold5D;
+            font-family: 'Playfair Display SC';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            margin-top: 13px;
+            @include transition;
+
+            &:hover {
+                background: $gold5D;
+            }
+        }
+
+        &-policy {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+
+            & a {
+                @include transition;
+                color: $gold5D;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 
     &__container {
         display: flex;
@@ -1460,10 +1623,16 @@
 }
 
 
+@media screen and (max-width: 1600px) {
+    .hero {}
+}
+
 
 
 
 @media screen and (max-width: 1400px) {
+
+    .hero {}
 
     .clients {
         &__container {
@@ -1551,6 +1720,17 @@
 
 @media screen and (max-width: 1200px) {
 
+
+    .hero {
+
+        &__container {
+
+            & h1 {
+                font-size: 42px;
+            }
+        }
+    }
+
     .questions {
 
         &__container {
@@ -1609,7 +1789,32 @@
     }
 }
 
+@media screen and (max-width: 1080px) {
+
+    .hero {
+        height: calc(100vh - 60px);
+    }
+
+    .drum {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1024px) {
+
+    .modal {
+        box-shadow: none;
+    }
+
+    .hero {
+
+        &__container {
+
+            & h1 {
+                font-size: 40px;
+            }
+        }
+    }
 
 
     .clients {
@@ -1626,9 +1831,20 @@
 
 @media screen and (max-width: 875px) {
 
+
+
     .hero {
 
         &__container {
+
+            &-head {
+                gap: 130px;
+
+                & h1 {
+                    font-size: 32px;
+                }
+            }
+
             &-intro {
                 justify-content: space-between;
 
@@ -1801,6 +2017,20 @@
 
 @media screen and (max-width: 768px) {
 
+    .hero {
+        height: 460px;
+
+        &__container {
+
+            &-head {
+
+                & h1 {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
     .clients {
         &__container {
 
@@ -1846,6 +2076,21 @@
 
 
 @media screen and (max-width: 650px) {
+
+    .hero {
+        height: 415px;
+
+        &__container {
+
+            &-head {
+                gap: 90px;
+
+                & h1 {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
 
     .clients {
         &__container {
@@ -2006,6 +2251,36 @@
 }
 
 @media screen and (max-width: 550px) {
+
+    .increase .form-thinks {
+        padding: 28px 22px 44px;
+
+        & img {
+            width: 240px;
+            height: 156px;
+        }
+
+        & p {
+            font-size: 22px;
+        }
+    }
+
+    .hero {
+        height: 325px;
+
+        &__container {
+
+            &-head {
+                gap: 90px;
+                margin-top: 36px;
+
+                & h1 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
     .clients {
         &__container {
 
@@ -2022,6 +2297,22 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .hero {
+        height: 260px;
+
+        &__container {
+
+            &-head {
+                gap: 60px;
+                margin-top: 36px;
+
+                & h1 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 
     .drop {
         margin-top: 40px;
@@ -2280,6 +2571,27 @@
     .increase {
         margin-top: 40px;
 
+        &__form {
+            padding: 20px;
+
+            &-btn {
+                margin-top: 0;
+            }
+
+            &-input {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                margin-bottom: 0;
+            }
+
+            &-close {
+                top: 20px;
+                right: 20px;
+            }
+        }
+
         &__container {
             margin: 0;
             padding: 0;
@@ -2387,6 +2699,21 @@
 
 @media screen and (max-width: 400px) {
 
+    .hero {
+        height: 220px;
+
+        &__container {
+
+            &-head {
+                gap: 38px;
+
+                & h1 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
     .clients {
         &__container {
 
@@ -2414,11 +2741,7 @@
 
 
 
-@media screen and (max-width: 1080px) {
-    .drum {
-        display: none;
-    }
-}
+
 
 
 

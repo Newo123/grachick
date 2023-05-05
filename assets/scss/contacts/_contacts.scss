@@ -94,15 +94,11 @@
 
 
 @media screen and (max-width: 1400px) {
-    .contacts-hero {
-        height: 80vh;
-    }
+    .contacts-hero {}
 }
 
 @media screen and (max-width: 1300px) {
-    .contacts-hero {
-        height: 60vh;
-    }
+    .contacts-hero {}
 
     .contacts {
 
@@ -117,6 +113,13 @@
 
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .contacts-hero {
+        height: calc(100vh - 60px);
     }
 }
 
@@ -143,10 +146,19 @@
     }
 
     .contacts-hero {
-        height: 50vh;
 
         &::before {
             height: 130px;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .contacts-hero {
+        height: 500px;
+
+        &::before {
+            height: 70px;
         }
     }
 }
@@ -175,7 +187,6 @@
     }
 
     .contacts-hero {
-        height: 37vh;
 
         &::before {
             height: 70px;
@@ -204,7 +215,7 @@
     }
 
     .contacts-hero {
-        height: 30vh;
+        height: 300px;
 
         &::before {
             height: 32px;
@@ -258,7 +269,7 @@
     }
 
     .contacts-hero {
-        height: 21.7vh;
+        height: 240px;
     }
 }
 
