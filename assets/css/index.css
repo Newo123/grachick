@@ -1342,10 +1342,11 @@ template {
     opacity: 0; } }
 
 .hero {
-  height: calc(100vh - 110px);
+  height: calc(100vw * ((1080 - 110) / 1920));
   position: relative;
   z-index: 0;
-  max-height: 1080px; }
+  max-height: 820px;
+  min-height: 260px; }
   .hero__container {
     height: 100%;
     display: flex;
@@ -1358,7 +1359,7 @@ template {
       align-items: center;
       gap: 200px; }
       .hero__container-head-title {
-        font-family: "Old Standard TT", serif;
+        font-family: "Old standart", serif;
         font-weight: 700;
         font-size: 62px;
         line-height: 130%;
@@ -1425,7 +1426,7 @@ template {
       .services__container-link:hover div {
         filter: blur(10px); }
       .services__container-link__text {
-        font-family: "Zen Antique Soft", serif;
+        font-family: "Zen Antique", serif;
         font-weight: 400;
         font-size: 40px;
         line-height: 120%;
@@ -1487,7 +1488,7 @@ template {
     justify-content: center;
     gap: 80px; }
     .how__container-title {
-      font-family: "Zen Antique Soft", serif;
+      font-family: "Zen Antique", serif;
       font-weight: 400;
       font-size: 52px;
       line-height: 130%;
@@ -1676,7 +1677,7 @@ template {
         color: #BB8E5D;
         margin-bottom: 20px; }
       .increase__container-card__title {
-        font-family: "Zen Antique Soft", serif;
+        font-family: "Zen Antique", serif;
         font-weight: 400;
         font-size: 22px;
         line-height: 130%;
@@ -1893,7 +1894,7 @@ template {
       gap: 420px;
       width: 100%; }
       .questions__container-tabs__tab {
-        font-family: "Zen Antique Soft", serif;
+        font-family: "Zen Antique", serif;
         font-weight: 400;
         font-size: 72px;
         line-height: 130%;
@@ -1913,7 +1914,7 @@ template {
         line-height: 130%;
         color: #BB8E5D; }
       .questions__container-head__title {
-        font-family: "Zen Antique Soft", serif;
+        font-family: "Zen Antique", serif;
         font-weight: 400;
         font-size: 40px;
         line-height: 130%;
@@ -2120,7 +2121,7 @@ template {
 
 @media screen and (max-width: 1080px) {
   .hero {
-    height: calc(100vh - 60px); }
+    height: calc(100vw * ((1200) / 1920)); }
   .drum {
     display: none; } }
 
@@ -2200,10 +2201,8 @@ template {
         font-size: 28px; } }
 
 @media screen and (max-width: 768px) {
-  .hero {
-    height: 460px; }
-    .hero__container-head h1 {
-      font-size: 28px; }
+  .hero__container-head h1 {
+    font-size: 28px; }
   .clients__container-cards {
     gap: 4px; }
     .clients__container-cards__card {
@@ -2218,12 +2217,10 @@ template {
       font-size: 22px; } }
 
 @media screen and (max-width: 650px) {
-  .hero {
-    height: 415px; }
-    .hero__container-head {
-      gap: 90px; }
-      .hero__container-head h1 {
-        font-size: 28px; }
+  .hero__container-head {
+    gap: 90px; }
+    .hero__container-head h1 {
+      font-size: 28px; }
   .clients__container-cards__card {
     height: 110px;
     padding-left: 10px;
@@ -2296,24 +2293,20 @@ template {
       height: 156px; }
     .increase .form-thinks p {
       font-size: 22px; }
-  .hero {
-    height: 325px; }
-    .hero__container-head {
-      gap: 90px;
-      margin-top: 36px; }
-      .hero__container-head h1 {
-        font-size: 22px; }
+  .hero__container-head {
+    gap: 90px;
+    margin-top: 36px; }
+    .hero__container-head h1 {
+      font-size: 22px; }
   .clients__container-cards__card {
     height: 85px; } }
 
 @media screen and (max-width: 480px) {
-  .hero {
-    height: 260px; }
-    .hero__container-head {
-      gap: 60px;
-      margin-top: 36px; }
-      .hero__container-head h1 {
-        font-size: 18px; }
+  .hero__container-head {
+    gap: 60px;
+    margin-top: 36px; }
+    .hero__container-head h1 {
+      font-size: 18px; }
   .drop {
     margin-top: 40px; }
     .drop__container-title {
@@ -2503,20 +2496,16 @@ template {
     background-size: cover; } }
 
 @media screen and (max-width: 400px) {
-  .hero {
-    height: 220px; }
-    .hero__container-head {
-      gap: 38px; }
-      .hero__container-head h1 {
-        font-size: 18px; }
+  .hero__container-head {
+    gap: 38px; }
+    .hero__container-head h1 {
+      font-size: 18px; }
   .clients__container-cards__card {
     height: 60px; }
-  .services {
-    margin-top: 40px; }
-    .services__container {
-      gap: 10px; }
-      .services__container-link {
-        height: 155px; } }
+  .services__container {
+    gap: 10px; }
+    .services__container-link {
+      height: 155px; } }
 
 @media screen and (max-width: 400px) {
   .questions__background img {
@@ -3013,7 +3002,7 @@ template {
         display: flex;
         align-items: flex-end;
         gap: 20px;
-        font-family: "Zen Antique Soft", serif;
+        font-family: "Zen Antique", serif;
         font-style: normal;
         font-weight: 400;
         font-size: 38px;
@@ -3653,7 +3642,11 @@ template {
         display: none; } }
 
 .contacts-hero {
-  height: calc(100vh - 110px);
+  height: calc(100vw * ((1080 - 110) / 1920));
+  position: relative;
+  z-index: 0;
+  max-height: 800px;
+  min-height: 200px;
   background-image: url("../img/contacts-hero.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -3725,7 +3718,11 @@ template {
 
 @media screen and (max-width: 1080px) {
   .contacts-hero {
-    height: calc(100vh - 60px); } }
+    height: calc(100vw * ((1080 - 110) / 1920));
+    position: relative;
+    z-index: 0;
+    max-height: 820px;
+    min-height: 260px; } }
 
 @media screen and (max-width: 1024px) {
   .contacts__container-info {
@@ -3738,10 +3735,8 @@ template {
     height: 130px; } }
 
 @media screen and (max-width: 860px) {
-  .contacts-hero {
-    height: 500px; }
-    .contacts-hero::before {
-      height: 70px; } }
+  .contacts-hero::before {
+    height: 70px; } }
 
 @media screen and (max-width: 790px) {
   .contacts__container-title {
@@ -3760,10 +3755,8 @@ template {
   .contacts__container-info {
     grid-template-columns: 1fr;
     gap: 20px; }
-  .contacts-hero {
-    height: 300px; }
-    .contacts-hero::before {
-      height: 32px; } }
+  .contacts-hero::before {
+    height: 32px; } }
 
 @media screen and (max-width: 480px) {
   .contacts iframe {
@@ -3784,9 +3777,7 @@ template {
           gap: 10px; }
       .contacts__container-info__block:nth-child(4) img {
         margin-left: 10px;
-        margin-right: 10px; }
-  .contacts-hero {
-    height: 240px; } }
+        margin-right: 10px; } }
 
 @media screen and (max-width: 400px) {
   .contacts__container-info__social-icons a img {
@@ -3893,7 +3884,7 @@ template {
   height: 500px;
   padding: 40px 50px; }
   .accounting__container-title {
-    font-family: "Zen Antique Soft", serif;
+    font-family: "Zen Antique", serif;
     font-weight: 400;
     font-size: 52px;
     line-height: 130%;
@@ -3952,7 +3943,7 @@ template {
   height: 500px;
   padding: 40px 50px; }
   .hr__container-title {
-    font-family: "Zen Antique Soft", serif;
+    font-family: "Zen Antique", serif;
     font-weight: 400;
     font-size: 52px;
     line-height: 130%;
@@ -4055,7 +4046,7 @@ template {
   margin-bottom: 10px; }
 
 .marketing__container-title {
-  font-family: "Zen Antique Soft", serif;
+  font-family: "Zen Antique", serif;
   font-weight: 400;
   font-size: 52px;
   line-height: 130%;
@@ -4256,7 +4247,7 @@ template {
     display: grid;
     height: 100%; }
     .online-hero__container-title {
-      font-family: "Zen Antique Soft", serif;
+      font-family: "Zen Antique", serif;
       font-weight: 400;
       font-size: 52px;
       line-height: 130%;
@@ -4526,7 +4517,7 @@ template {
     justify-content: flex-end;
     height: 100%; }
     .error-404__container-title {
-      font-family: "Zen Antique Soft", serif;
+      font-family: "Zen Antique", serif;
       font-weight: 400;
       font-size: 52px;
       line-height: 130%;
@@ -4594,7 +4585,7 @@ template {
   height: 500px;
   padding: 40px 50px; }
   .legal-services__container-title {
-    font-family: "Zen Antique Soft", serif;
+    font-family: "Zen Antique", serif;
     font-weight: 400;
     font-size: 52px;
     line-height: 130%;
@@ -4650,7 +4641,7 @@ template {
   height: 500px;
   padding: 40px 50px; }
   .licensing__container-title {
-    font-family: "Zen Antique Soft", serif;
+    font-family: "Zen Antique", serif;
     font-weight: 400;
     font-size: 52px;
     line-height: 130%;

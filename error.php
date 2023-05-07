@@ -26,7 +26,6 @@ header('HTTP/1.0 404 Not Found');
                         <ul class="sub__menu">
                             <li class="sub__menu-item"><p>Маркетинговые услуги<span></span></p>
                                 <ul class="second__menu">
-                                    <button id="top=-btn">1</button>
 
                                     <li class="second__menu-item">
                                         <a href="./krasnodar/marketing/development.html">Разработка<span></span></a>
@@ -85,7 +84,6 @@ header('HTTP/1.0 404 Not Found');
                                             <li class="thred__menu-item"><a href="./krasnodar/marketing/marketer/building-a-sales-department.html">Выстраивание отдела продаж<span></span></a></li>
                                         </ul>
                                     </li>
-                                    <button id="bottom-btn">2</button>
                                 </ul>
                             </li>
                             <li class="sub__menu-item"><a href="./krasnodar/accounting-services.html">Бухгалтерские услуги<span></span></a>

@@ -9,6 +9,7 @@ const thridMenuItem = document.getElementsByClassName('mobile-menu__list__item-s
 const secondMenu = document.querySelector('.mobile-menu__list__item-second');
 const fourthMenu = document.querySelectorAll('.mobile-menu__list__item-second__thrid-item__fourth');
 
+
 item.addEventListener('click', () => {
 
     if (item.children[1].style.transform !== 'rotate(90deg)') {
@@ -147,3 +148,83 @@ toggleMenuBtn.addEventListener('click', () => toggleMenu());
 menuShadow.addEventListener('click', () => toggleMenu());
 
 // export default toggleMenu;
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const secondMenuDesktop = document.getElementsByClassName('second__menu');
+
+    if (secondMenuDesktop[2].offsetHeight >= 300) {
+        let count = 0;
+        const buttonTop = document.createElement('button');
+        const buttonBot = document.createElement('button');
+        const div = document.createElement('div');
+        const div2 = document.createElement('div');
+
+        div.style.width = '10px';
+        div.style.height = '10px';
+        div.style.borderLeft = '1px solid #BB8E5D';
+        div.style.borderTop = '1px solid #BB8E5D';
+
+        div2.style.width = '10px';
+        div2.style.height = '10px';
+        div2.style.borderLeft = '1px solid #BB8E5D';
+        div2.style.borderTop = '1px solid #BB8E5D';
+
+        buttonTop.style.position = 'absolute';
+        buttonTop.style.top = '0';
+        buttonTop.style.left = '0';
+        buttonTop.style.right = '0';
+        buttonTop.style.height = '20px';
+        buttonTop.style.background = '#000000';
+        buttonTop.style.border = 'none';
+        buttonTop.style.cursor = 'pointer';
+        buttonTop.style.display = 'flex';
+        buttonTop.style.alignItems = 'center';
+        buttonTop.style.justifyContent = 'center';
+        buttonTop.appendChild(div)
+        buttonTop.children[0].style.transform = 'rotate(45deg)'
+
+        buttonBot.style.position = 'absolute';
+        buttonBot.style.bottom = '0';
+        buttonBot.style.left = '0';
+        buttonBot.style.right = '0';
+        buttonBot.style.height = '20px';
+        buttonBot.style.background = '#000000';
+        buttonBot.style.border = 'none';
+        buttonBot.style.cursor = 'pointer';
+        buttonBot.style.display = 'flex';
+        buttonBot.style.alignItems = 'center';
+        buttonBot.style.justifyContent = 'center';
+        buttonBot.appendChild(div2)
+        buttonBot.children[0].style.transform = 'rotate(-135deg)'
+
+
+        buttonTop.addEventListener('click', () => {
+            if (count < 0) {
+                count += 41.8;
+                for (let i = 0; i < secondMenuDesktop[2].children.length - 2; i++) {
+                    secondMenuDesktop[2].children[i].style.transform = `translateY(${count}px)`
+                }
+            }
+        })
+
+        buttonBot.addEventListener('click', () => {
+
+
+            if (count > -((secondMenuDesktop[2].children.length - 2) * 41.8) + 300) {
+                count -= 41.8;
+                for (let i = 0; i < secondMenuDesktop[2].children.length - 2; i++) {
+                    secondMenuDesktop[2].children[i].style.transform = `translateY(${count}px)`
+                }
+            }
+        })
+
+        secondMenuDesktop[2].style.maxHeight = '320px';
+        secondMenuDesktop[2].style.overflowY = 'hidden';
+        secondMenuDesktop[2].appendChild(buttonTop);
+        secondMenuDesktop[2].appendChild(buttonBot);
+    }
+
+});
