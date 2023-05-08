@@ -11,8 +11,7 @@
     right: 0;
     top: 50%;
     margin-right: 6px;
-    z-index: 15;
-
+    z-index: 14;
     @include transition;
 
     &__close {
@@ -66,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 12;
+    z-index: 50;
     @include transition;
     transform: translateX(-100%);
 }
@@ -142,7 +141,7 @@
 
 .modal {
     position: relative;
-    z-index: 14;
+    z-index: 50000;
     background-color: $bg21;
     border: 2px solid $gold5D;
     width: 960px;

@@ -1,4 +1,4 @@
-const formBtn = document.querySelectorAll('.increase__container-card__btn');
+const formBtnOpen = document.querySelector('.increase__container-card__btn');
 const formShadow = document.querySelector('.form-shadow');
 const form = document.querySelector('.increase__form');
 const formClose = document.querySelector('.increase__form-close');
@@ -7,7 +7,6 @@ const formThinks = document.querySelector('.form-thinks');
 const callback = document.querySelector('.online-hero__container-btn');
 
 const openForm = () => {
-    console.log(1)
     form.style.display = 'flex';
     formShadow.style.display = 'block';
 }
@@ -17,10 +16,7 @@ const closeForm = () => {
     formShadow.style.display = 'none';
     formThinks.style.display = 'none';
 }
-callback.addEventListener('click', openForm);
-for (let i = 0; i < formBtn.length; i++) {
-    formBtn[i].addEventListener('click', openForm);
-}
+
 
 formShadow.addEventListener('click', closeForm);
 formClose.addEventListener('click', closeForm);
@@ -33,3 +29,6 @@ form.addEventListener('submit', (e) => {
         formShadow.style.display = 'none';
     }, 3000)
 })
+
+formBtnOpen.addEventListener('click', openForm);
+callback.addEventListener('click', openForm);

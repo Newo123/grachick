@@ -909,7 +909,7 @@ template {
   right: 0;
   top: 50%;
   margin-right: 6px;
-  z-index: 15;
+  z-index: 14;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
@@ -953,7 +953,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 12;
+  z-index: 50;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -1011,7 +1011,7 @@ template {
 
 .modal {
   position: relative;
-  z-index: 14;
+  z-index: 50000;
   background-color: #0A1921;
   border: 2px solid #BB8E5D;
   width: 960px;
